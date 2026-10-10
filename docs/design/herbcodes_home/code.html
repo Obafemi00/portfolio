@@ -1,0 +1,472 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"secondary-fixed-dim":"#29dec6","inverse-surface":"#2c3137","secondary-fixed":"#56fbe2","outline":"#6d797d","on-tertiary-fixed-variant":"#6419a7","on-primary-fixed":"#001f25","tertiary":"#7e3ac1","on-secondary-container":"#007164","primary-fixed-dim":"#57d7f1","background":"#f7f9ff","surface-container":"#eaeef6","surface-bright":"#f7f9ff","error-container":"#ffdad6","on-primary-fixed-variant":"#004e5b","error":"#ba1a1a","secondary-container":"#56fbe2","outline-variant":"#bcc9cc","tertiary-container":"#be7eff","surface-tint":"#006878","tertiary-fixed":"#f0dbff","primary":"#006878","on-primary-container":"#003943","inverse-primary":"#57d7f1","on-secondary-fixed":"#00201b","surface":"#f7f9ff","tertiary-fixed-dim":"#dcb8ff","on-tertiary-fixed":"#2c0051","on-error":"#ffffff","primary-fixed":"#a6eeff","inverse-on-surface":"#edf1f8","on-error-container":"#93000a","surface-container-low":"#f0f4fb","primary-container":"#05abc4","on-secondary":"#ffffff","on-surface-variant":"#3d494c","surface-dim":"#d6dae2","secondary":"#006b5e","on-tertiary":"#ffffff","surface-container-lowest":"#ffffff","on-surface":"#171c21","surface-variant":"#dee3ea","surface-container-highest":"#dee3ea","on-primary":"#ffffff","on-background":"#171c21","on-tertiary-container":"#4d0088","on-secondary-fixed-variant":"#005047","surface-container-high":"#e4e8f0"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"gutter-desktop":"2rem","margin-desktop":"4rem","gutter":"1.5rem","margin":"1.25rem","margin-tablet":"2.5rem","space-lg":"1.5rem","section-padding-min":"5rem","space-xs":"0.25rem","section-padding-max":"8rem","space-md":"1rem","space-xl":"2.5rem","space-sm":"0.5rem"},"fontFamily":{"headline-md":["Hammersmith One"],"display-hero":["Hammersmith One"],"headline-lg-mobile":["Hammersmith One"],"headline-lg":["Hammersmith One"],"body-lg":["Inter"],"body-sm":["Inter"],"label-ui":["Inter"],"code-spec":["Inter"],"eyebrow-lg":["Bebas Neue"],"headline-sm":["Hammersmith One"],"eyebrow-sm":["Bebas Neue"],"body-md":["Inter"],"display-hero-mobile":["Hammersmith One"]},"fontSize":{"headline-md":["26px",{"lineHeight":"32px","fontWeight":"400"}],"display-hero":["52px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-ui":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"code-spec":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"eyebrow-lg":["18px",{"lineHeight":"22px","letterSpacing":"0.15em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"400"}],"eyebrow-sm":["14px",{"lineHeight":"18px","letterSpacing":"0.2em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"display-hero-mobile":["44px",{"lineHeight":"50px","letterSpacing":"-0.01em","fontWeight":"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Hammersmith+One&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-variant"><div class="h-20 max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="HerbCodes Technology Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V-fhh-8bQezPnA4anQ2LtyOwaGQUONJJeEHbVizGPGJNJOnFGAy6FvZOx0tOgDbTfCyqHBs7Y3Sx4bmUm7GTVYiJRMFjZlEvYuKmgLXmmvCt2Uif_vQJ0f76w8rBhUbN0Xn8kSD06colLyywVKiWr3Jk18WRuAKst51OPFiB-HxCZVKkJSkocdKHNVa6960AGX2tYZTN6eh_fuZGSb2DXtMU9SJZZJ3NY6wNMOUpl9xUydwNK4pVSbKg"></a></div><nav class="hidden md:flex items-center gap-gutter-desktop" data-active-classes="text-on-surface border-b-2 border-primary-container font-semibold pb-1"><a class="font-body-sm text-body-sm text-on-surface hover:text-primary-container transition-colors py-1" data-path="work" href="#">Work</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary-container transition-colors py-1" data-path="process" href="#">Process</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary-container transition-colors py-1" data-path="about" href="#">About</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center gap-space-xs px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-body-sm text-body-sm font-medium hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors shadow-sm" data-path="contact" href="#"><span class="leading-none">Contact</span><span class="leading-none text-base font-bold">»</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full min-h-[calc(100vh-5rem)] bg-surface flex flex-col justify-between overflow-hidden">
+<div class="max-w-7xl mx-auto w-full px-margin md:px-margin-tablet lg:px-margin-desktop my-auto py-12 md:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Hero Left Column: Analytical Copy & CTAs -->
+<div class="lg:col-span-7 flex flex-col items-start z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container mb-6">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-code-spec text-code-spec text-on-surface-variant uppercase tracking-wider">SYSTEMS ARCHITECTURE &amp; DIGITAL CRAFT</span>
+</div>
+<h1 class="font-display-hero text-display-hero-mobile lg:text-display-hero text-on-surface font-normal max-w-2xl leading-none">
+            We build modern,<br>
+            reliable, scalable<br>
+            digital systems.
+          </h1>
+<p class="font-body-lg text-body-lg text-outline mt-6 max-w-xl">
+            Web design, development, and management for teams that need it right.
+          </p>
+<div class="flex flex-wrap items-center gap-4 mt-8">
+<a class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-all duration-200 shadow-sm" href="#work">
+              See our work
+            </a>
+<a class="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-surface-container-lowest text-primary-container font-body-sm text-body-sm font-semibold shadow-sm hover:bg-surface-container transition-all duration-200" href="#contact-cta">
+              Start a project
+            </a>
+</div>
+<!-- Micro Spec Metadata Bar -->
+<div class="grid grid-cols-3 gap-6 pt-12 mt-12 w-full max-w-lg">
+<div>
+<span class="block font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">UPTIME SLA</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-normal">99.98%</span>
+</div>
+<div>
+<span class="block font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">CORE METRIC</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-normal">&lt;450ms TTFB</span>
+</div>
+<div>
+<span class="block font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">PARADIGM</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-normal">Deterministic</span>
+</div>
+</div>
+</div>
+<!-- Hero Right Column: Abstract Schematic Graphic & Depth Glow -->
+<div class="lg:col-span-5 relative w-full flex items-center justify-center min-h-[380px] lg:min-h-[520px]">
+<!-- Cyan Radial Spotlight -->
+<div class="absolute w-80 h-80 rounded-full bg-primary-fixed-dim/20 blur-3xl pointer-events-none -top-10 -right-10"></div>
+<div class="absolute w-64 h-64 rounded-full bg-primary-container/15 blur-2xl pointer-events-none"></div>
+<!-- Architectural System Schematic Module -->
+<div class="relative w-full max-w-md p-6 rounded-lg bg-surface-container-lowest shadow-md">
+<!-- Header Spec Header -->
+<div class="flex items-center justify-between pb-4">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-code-spec text-code-spec text-on-surface-variant font-semibold">HC-SYS-NODE // 01</span>
+</div>
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline">STABLE</span>
+</div>
+<!-- Mathematical Vector Grid & Data Flow Architecture -->
+<div class="relative w-full h-64 rounded bg-surface-container-low overflow-hidden flex items-center justify-center p-4">
+<!-- Geometric Coordinate Grid -->
+<svg class="absolute inset-0 w-full h-full text-outline-variant/40" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="20" id="dot-grid" patternUnits="userSpaceOnUse" width="20">
+<circle cx="2" cy="2" fill="currentColor" r="1"></circle>
+</pattern>
+</defs>
+<rect fill="url(#dot-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Node Network Diagram -->
+<svg class="relative z-10 w-full h-full" fill="none" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+<!-- Bus Lines -->
+<path class="text-outline-variant" d="M 40 110 L 120 110 L 160 50 L 260 50" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="text-outline-variant" d="M 120 110 L 160 170 L 260 170" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<path class="text-primary-container" d="M 40 110 L 280 110" stroke="currentColor" stroke-width="2"></path>
+<!-- Schematic Nodes -->
+<circle class="fill-surface-container-lowest text-primary-container" cx="40" cy="110" r="6" stroke="currentColor" stroke-width="3"></circle>
+<circle class="fill-surface-container-lowest text-outline" cx="160" cy="50" r="5" stroke="currentColor" stroke-width="2"></circle>
+<circle class="fill-surface-container-lowest text-outline" cx="160" cy="170" r="5" stroke="currentColor" stroke-width="2"></circle>
+<circle class="fill-primary-container" cx="260" cy="50" r="5"></circle>
+<circle class="fill-primary-container" cx="260" cy="170" r="5"></circle>
+<circle class="fill-primary-container" cx="280" cy="110" r="8"></circle>
+<text class="fill-on-surface-variant font-code-spec text-[10px]" x="45" y="98">INGRESS</text>
+<text class="fill-outline font-code-spec text-[9px]" x="168" y="44">DEV_PIPELINE</text>
+<text class="fill-outline font-code-spec text-[9px]" x="168" y="186">ASYNC_WORKER</text>
+<text class="fill-primary font-code-spec text-[10px] font-bold" x="220" y="104">CORE_PROD</text>
+</svg>
+</div>
+<!-- Bottom Datastream Readout -->
+<div class="mt-4 pt-3 flex items-center justify-between text-on-surface-variant">
+<span class="font-code-spec text-code-spec">LATENCY: 12ms</span>
+<span class="font-code-spec text-code-spec">STATUS: DEPLOYED</span>
+<span class="font-code-spec text-code-spec">REGION: AF-SOUTH-1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scroll Indicator Anchor -->
+<div class="w-full pb-8 flex flex-col items-center justify-center">
+<a class="group flex flex-col items-center gap-2 cursor-pointer focus:outline-none" href="#services">
+<span class="font-code-spec text-[10px] tracking-widest text-outline uppercase group-hover:text-primary-container transition-colors">EXPLORE</span>
+<div class="w-[1.5px] h-8 bg-surface-container-high relative overflow-hidden">
+<div class="w-full h-3 bg-primary-container animate-[bounce_2s_infinite]"></div>
+</div>
+</a>
+</div>
+</section>
+<!-- 2. SERVICES SECTION -->
+<section class="w-full bg-surface-container-lowest py-24" id="services">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="max-w-2xl mb-16">
+<span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.2em] text-primary-container uppercase block mb-3">WHAT WE DO</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+          Services engineered for the long term.
+        </h2>
+<p class="font-body-md text-body-md text-outline mt-3">
+          Rigorous execution across modern stacks, eliminating technical debt through disciplined architecture.
+        </p>
+</div>
+<!-- 11-Card Typographic Architectural Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 1. Web Development -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">01</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Web Development</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Bespoke, high-throughput web applications crafted with precision, accessibility, and modern frameworks.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 2. Shopify and E-Commerce -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">02</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Shopify &amp; E-Commerce</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              High-converting custom storefronts with custom checkout logic and headless architecture integrations.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 3. Website Redesign and Revamp -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">03</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Redesign &amp; Revamp</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Transforming outdated systems into high-impact digital experiences without breaking existing data flows.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 4. Management and Maintenance -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">04</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Management &amp; Maintenance</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Proactive system monitoring, dependency audits, regular security patches, and latency optimization.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 5. Cloud and DevOps -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">05</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Cloud &amp; DevOps</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Automated CI/CD pipelines, container orchestration, and multi-region resilient cloud infrastructures.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 6. Digital Marketing and SEO -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">06</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Digital Marketing &amp; SEO</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Structured metadata architecture, Core Web Vitals optimization, and search engine discoverability.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 7. Automation and Systems Integration -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">07</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Automation &amp; Integration</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Webhook orchestrations, custom API bridges, and end-to-end syncs between isolated tools.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 8. Technical Consulting -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">08</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Technical Consulting</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Architecture feasibility reviews, stack rationalization, and pragmatic guidance for scaling tech leads.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 9. Technical Training -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">09</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Technical Training</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Upskilling engineering teams in modern paradigms, CI automation workflows, and code review hygiene.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 10. Brand and Digital Product Support -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">10</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Brand &amp; Product Support</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 line-clamp-2">
+              Cohesive design system governance, component tokens, and recurring visual implementation QA.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- 11. Ongoing Partnership -->
+<div class="group p-8 rounded bg-surface-container-low hover:bg-surface-container transition-all duration-200 flex flex-col justify-between h-56 shadow-sm md:col-span-2 lg:col-span-2">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-code-spec text-code-spec text-outline">11</span>
+<span class="font-code-spec text-code-spec text-primary-container font-semibold uppercase tracking-wider">FRACTIONAL CTO &amp; SQUAD</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ongoing Partnership</h3>
+<p class="font-body-sm text-body-sm text-outline mt-2 max-w-xl">
+              Embedded engineering team providing continuous iteration, architectural governance, and immediate response bandwidth for your growing venture.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. SELECTED WORK SECTION -->
+<section class="w-full bg-surface-container-low py-24" id="work">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.2em] text-primary-container uppercase block mb-3">SELECTED WORK</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
+            Recent projects.
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-outline max-w-md">
+          A showcase of deterministic architecture, crisp editorial UI, and verified performance outcomes.
+        </p>
+</div>
+<!-- Asymmetrical 2-Column Editorial Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Project 1: Realxworld (Large Left Col) -->
+<div class="lg:col-span-7 group flex flex-col rounded overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-full aspect-[16/10] overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern desktop web application interface dashboard for Realxworld, displaying cleanly formatted financial and operations telemetry data, crisp light mode layout with cyan data highlights, professional minimal engineering software aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH3fxY4yCALju4uE0_xsBT8WgYkFlU2BKzrceHd5SVeO4adJrQZv0TYQHAJBgpIkb7AcfIbil2Z9KK8nYZnC4fkZcO3w1LHushZcqArGkUfx6N6eadvN9aAZGwvQaXrMK2o01X0Q3pE3stAacmRetp0S4KVtxhxuW0crbG3ajpfvkLb50dltpv64FZaujwqQuwR8N3giuRPfLr7crD9LXAwr3iKZftjTY5MxigHugAY5R_kqTrTEk">
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary-container tracking-widest uppercase">FULL-STACK PLATFORM</span>
+</div>
+</div>
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Realxworld</h3>
+<p class="font-body-md text-body-md text-outline">
+                Modular multi-tenant dashboard and distributed backend processing over 45k daily transactions with zero unhandled exceptions.
+              </p>
+</div>
+<div class="mt-6 pt-4 flex items-center justify-between">
+<span class="font-code-spec text-code-spec text-outline uppercase tracking-wider">NEXT.JS / GO / POSTGRESQL</span>
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Right Stack: Projects 2 & 3 -->
+<div class="lg:col-span-5 flex flex-col gap-8">
+<!-- Project 2: Ituen Basi -->
+<div class="group flex flex-col rounded overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-full aspect-[16/10] overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Editorial luxury fashion e-commerce storefront for Ituen Basi, showcasing bespoke digital collection layouts, high-fashion photography in gallery grid, minimal typography, crisp white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_cFOLFNXyCuZwM5WlDOGcXN6Zjrjv3fKMrxnJJpKfVvv2hKM0WidipmHx0AZpWNVpCNqJcYb3jauhfhzdlyolWvK11bRPZyEWbeSToN0t0Q-_xSxjqz2mkjxOSdl-OieI03IgF-QcThkeOx30PqikafmZEP3nPz3QwZGvbDpeE9IgFhoqoLAobso1Cwj0yjIrgMjQ9OeHp5QSuTXyq43CSy2dQ23fAaaDxBITLjgsGDcgBE2S8Bw">
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary-container tracking-widest uppercase">E-COMMERCE &amp; DIGITAL EXPERIENCE</span>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ituen Basi</h3>
+<p class="font-body-sm text-body-sm text-outline">
+                  High-fashion editorial digital store with responsive lookbooks and optimized international checkout flows.
+                </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-code-spec text-code-spec text-outline uppercase tracking-wider">SHOPIFY PLUS / TAILWIND</span>
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 3: Studio SDK CGI -->
+<div class="group flex flex-col rounded overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-300">
+<div class="w-full aspect-[16/10] overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural visualization and 3D studio portfolio for Studio SDK CGI, exhibiting stark brutalist concrete structures, hyper-realistic 3D rendering stills, monochrome palette with clean interface lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZTNuCqFdOUaoO02PaSaPylA90_VSyuXwaOL8GTtgyR5kSKSF_gzFBHzfJd0nnNboZR0w5ufLEkrgCEVIPdBQgw1CEg4-oTytTu27asVQUhk6U0B7S2QBv3GXLKPUGOOAUKTsqEqibXGD2pk-QYIMw_857FwvuGdl1UhKTTUCTAGVcHZY5aCZqFKKgaSWt4AHaoJIrc9gj0lmpzCdncgX1LWR9Hn-UklQtlx_haMAIdaQupEoLpMg">
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur-sm px-3 py-1 rounded-full">
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary-container tracking-widest uppercase">PORTFOLIO &amp; 3D SHOWCASE</span>
+</div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Studio SDK CGI</h3>
+<p class="font-body-sm text-body-sm text-outline">
+                  Ultra-fast WebGL portfolio featuring progressive image streaming and interactive 3D scene viewports.
+                </p>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between">
+<span class="font-code-spec text-code-spec text-outline uppercase tracking-wider">THREE.JS / ASTRO / GLSL</span>
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Work CTA -->
+<div class="mt-16 text-center">
+<a class="inline-flex items-center gap-2 font-headline-sm text-headline-sm text-on-surface hover:text-primary-container transition-colors group" href="#all-work">
+<span class="">View all work</span>
+<span class="material-symbols-outlined text-primary-container group-hover:translate-x-1.5 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 4. TRUSTED BY & TESTIMONIALS SECTION -->
+<section class="w-full bg-surface-container-lowest py-24">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<!-- Eyebrow -->
+<div class="text-center mb-10">
+<span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.25em] text-primary-container uppercase">TRUSTED BY</span>
+</div>
+<!-- Grayscale Monospaced Brand Row -->
+<div class="w-full overflow-x-auto pb-4">
+<div class="flex items-center justify-between gap-8 min-w-[760px] py-4 px-2">
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Ituen Basi</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Bakonery</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Founder Groundworks</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Katy Express Track</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Creator Playbook</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Realxworld</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">Studio SDK CGI</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">LeapCrest</span>
+<span class="font-headline-sm text-lg tracking-wider text-outline uppercase hover:text-on-surface transition-colors cursor-default">1010 Coding</span>
+</div>
+</div>
+<!-- Two Editorial Testimonial Panels -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
+<!-- Card 1 -->
+<div class="p-10 rounded bg-surface-container-low relative flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-headline-lg text-display-hero text-primary-container leading-none block mb-4">“</span>
+<blockquote class="font-headline-sm text-headline-sm text-on-surface leading-relaxed">
+              HerbCodes transformed our legacy system into a resilient, lightning-fast platform that scales effortlessly.
+            </blockquote>
+</div>
+<div class="mt-8 pt-6">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Chief Technology Officer</p>
+<p class="font-body-sm text-body-sm text-outline">Realxworld</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-10 rounded bg-surface-container-low relative flex flex-col justify-between shadow-sm">
+<div>
+<span class="font-headline-lg text-display-hero text-primary-container leading-none block mb-4">“</span>
+<blockquote class="font-headline-sm text-headline-sm text-on-surface leading-relaxed">
+              Uncompromising precision and engineering discipline. Delivered on schedule with zero fluff.
+            </blockquote>
+</div>
+<div class="mt-8 pt-6">
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">Creative Director</p>
+<p class="font-body-sm text-body-sm text-outline">Studio SDK</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. FINAL CTA BAND -->
+<section class="w-full bg-inverse-surface text-inverse-on-surface py-20 relative overflow-hidden" id="contact-cta">
+<!-- Rare Marketing Accent: Ultra-subtle deep violet ambient wash (<5%) -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full bg-tertiary/10 blur-3xl pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-margin md:px-margin-tablet text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-inverse-on-surface mb-4">
+        Let’s build something reliable.
+      </h2>
+<p class="font-body-lg text-body-lg text-outline-variant mb-10 max-w-xl mx-auto">
+        Start a conversation about your technical architecture and design roadmap.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-all duration-200 shadow-md" href="mailto:hello@herbcodes.com">
+          Start a project
+        </a>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-6">
+        Response within 24 hours.
+      </p>
+</div>
+</section>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-section-padding-min pb-section-padding-min"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop pb-section-padding-min"><div class="md:col-span-5 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-surface-container-lowest text-[14px]">terminal</span></div><span class="font-headline-sm text-headline-sm tracking-wider uppercase text-inverse-on-surface">HerbCodes</span></div><p class="font-body-md text-body-md text-outline-variant max-w-sm">Clean. Reliable. Engineered.</p><div class="flex items-center gap-space-md pt-space-xs"><a aria-label="LinkedIn" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">hub</span></a><a aria-label="Platform" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">code</span></a><a aria-label="Source Repository" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">deployed_code</span></a><a aria-label="Community Channel" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">scatter_plot</span></a></div></div><div class="md:col-span-3 flex flex-col items-start"><span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.2em] text-primary-container mb-space-md uppercase">SITEMAP</span><nav class="flex flex-col space-y-space-sm" data-active-classes="text-primary-container font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="work" href="#">Work</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="process" href="#">Process</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="about" href="#">About</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="contact" href="#">Contact</a></nav></div><div class="md:col-span-4 flex flex-col items-start gap-space-sm"><span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.2em] text-primary-container uppercase">CONTACT</span><a class="font-body-md text-body-md text-primary-container hover:underline" href="mailto:hello@herbcodes.com">hello@herbcodes.com</a><p class="font-body-sm text-body-sm text-outline">Ogun State, Nigeria</p><div class="pt-space-sm"><a class="inline-block bg-surface-container-lowest text-primary-container border border-primary-container font-body-sm text-body-sm font-semibold rounded-full px-6 py-2.5 hover:bg-surface-container-high hover:border-secondary-fixed-dim hover:text-secondary transition-all" data-path="contact" href="#">Start a project</a></div></div></div><div class="border-t border-outline/30 pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><p class="">© 2026 HerbCodes Technology. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-inverse-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-inverse-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div></div></div></footer>
+
+</body></html>

@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-container":"#003943","surface-container-high":"#e4e8f0","surface-dim":"#d6dae2","secondary-fixed-dim":"#29dec6","outline":"#6d797d","background":"#f7f9ff","surface-container-low":"#f0f4fb","outline-variant":"#bcc9cc","primary-fixed":"#a6eeff","surface-tint":"#006878","on-tertiary-container":"#4d0088","inverse-surface":"#2c3137","on-background":"#171c21","tertiary-container":"#be7eff","surface-container-highest":"#dee3ea","tertiary-fixed":"#f0dbff","on-primary-fixed":"#001f25","on-secondary":"#ffffff","tertiary-fixed-dim":"#dcb8ff","on-secondary-fixed":"#00201b","on-secondary-container":"#007164","surface-container-lowest":"#ffffff","primary":"#006878","on-tertiary-fixed-variant":"#6419a7","secondary-fixed":"#56fbe2","primary-fixed-dim":"#57d7f1","surface-bright":"#f7f9ff","on-error":"#ffffff","primary-container":"#05abc4","surface-variant":"#dee3ea","on-secondary-fixed-variant":"#005047","on-primary-fixed-variant":"#004e5b","on-error-container":"#93000a","surface":"#f7f9ff","on-surface-variant":"#3d494c","on-primary":"#ffffff","inverse-primary":"#57d7f1","on-tertiary":"#ffffff","secondary-container":"#56fbe2","tertiary":"#7e3ac1","error-container":"#ffdad6","inverse-on-surface":"#edf1f8","on-tertiary-fixed":"#2c0051","surface-container":"#eaeef6","on-surface":"#171c21","secondary":"#006b5e","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"margin-desktop":"4rem","space-xl":"2.5rem","gutter":"1.5rem","margin-tablet":"2.5rem","gutter-desktop":"2rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","section-padding-min":"5rem","section-padding-max":"8rem","margin":"1.25rem"},"fontFamily":{"body-md":["Inter"],"eyebrow-sm":["Bebas Neue"],"headline-sm":["Hammersmith One"],"label-ui":["Inter"],"headline-lg-mobile":["Hammersmith One"],"code-spec":["Inter"],"display-hero":["Hammersmith One"],"headline-lg":["Hammersmith One"],"body-lg":["Inter"],"headline-md":["Hammersmith One"],"display-hero-mobile":["Hammersmith One"],"body-sm":["Inter"],"eyebrow-lg":["Bebas Neue"]},"fontSize":{"body-md":["16px",{"lineHeight":"24px","fontWeight":"400"}],"eyebrow-sm":["14px",{"lineHeight":"18px","letterSpacing":"0.2em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"400"}],"label-ui":["13px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"headline-lg-mobile":["32px",{"lineHeight":"38px","letterSpacing":"0em","fontWeight":"400"}],"code-spec":["12px",{"lineHeight":"16px","letterSpacing":"0.05em","fontWeight":"600"}],"display-hero":["52px",{"lineHeight":"60px","letterSpacing":"-0.02em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"headline-md":["26px",{"lineHeight":"32px","fontWeight":"400"}],"display-hero-mobile":["44px",{"lineHeight":"50px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["14px",{"lineHeight":"20px","fontWeight":"400"}],"eyebrow-lg":["18px",{"lineHeight":"22px","letterSpacing":"0.15em","fontWeight":"400"}]}}}}</script><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Hammersmith+One&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-md border-b border-surface-variant"><div class="h-20 max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm" data-path="herbcodes-home" href="#"><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-surface-container-lowest text-[18px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface leading-none">HerbCodes</span><span class="font-eyebrow-sm text-[10px] tracking-[0.25em] text-outline uppercase leading-none mt-1">TECHNOLOGY</span></div></a></div><nav class="hidden md:flex items-center gap-gutter-desktop" data-active-classes="text-on-surface border-b-2 border-primary-container font-semibold pb-1"><a class="font-body-sm text-body-sm text-on-surface hover:text-primary-container transition-colors py-1" data-path="herbcodes-work" href="#">Work</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary-container transition-colors py-1" data-path="herbcodes-process" href="#">Process</a><a class="font-body-sm text-body-sm text-on-surface hover:text-primary-container transition-colors py-1" data-path="herbcodes-about" href="#">About</a><a class="font-body-sm text-body-sm text-on-surface border-b-2 border-primary-container font-semibold pb-1 hover:text-primary-container transition-colors py-1" data-path="herbcodes-contact" href="#">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center gap-space-xs px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors shadow-sm" data-path="herbcodes-contact" href="#"><span class="leading-none">Start a Project</span><span class="leading-none text-base font-bold">»</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Telemetry Bar -->
+<section class="w-full bg-surface-container-high text-on-surface-variant">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-sm font-code-spec text-code-spec tracking-wider uppercase">
+<div class="flex items-center gap-space-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-on-surface font-semibold">STUDIO TELEMETRY:</span>
+<span class="">ACCEPTING SELECT ENGAGEMENTS Q2/Q3 2026</span>
+</div>
+<div class="flex items-center gap-space-md text-outline">
+<span class="">SLA: &lt;24H DISCOVERY</span>
+<span class="hidden sm:inline">|</span>
+<span class="hidden sm:inline">LOC: OGUN STATE, NG (WAT/UTC+1)</span>
+<span class="hidden md:inline">|</span>
+<span class="hidden md:inline text-primary">REPO AUDIT READY</span>
+</div>
+</div>
+</section>
+<!-- Editorial Header Section -->
+<section class="w-full bg-surface-container-lowest pt-space-xl pb-space-xl">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
+<div class="lg:col-span-8 flex flex-col items-start space-y-space-sm">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-low text-primary font-eyebrow-sm text-eyebrow-sm tracking-[0.2em]">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span class="">SPECIFICATION &amp; PROJECT INITIATION</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight max-w-3xl leading-[1.08]">
+            Let’s engineer your next digital platform.
+          </h1>
+<p class="font-body-lg text-body-lg text-outline max-w-2xl pt-space-xs">
+            Whether deploying a ground-up high-performance application, revamping enterprise commerce, or optimizing cloud infrastructure, we review technical specifications and reply within 24 business hours.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-sm lg:items-end">
+<div class="w-full lg:max-w-xs bg-surface-container-low p-space-md rounded-DEFAULT flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-outline font-eyebrow-sm text-eyebrow-sm uppercase">
+<span class="">Primary Gateway</span>
+<span class="text-primary font-code-spec text-code-spec">ACTIVE</span>
+</div>
+<a class="font-headline-sm text-headline-sm text-primary hover:text-secondary-fixed-dim transition-colors truncate" href="mailto:hello@herbcodes.com">
+              hello@herbcodes.com
+            </a>
+<p class="font-body-sm text-body-sm text-outline">
+              PGP Encrypted &amp; Mutual NDA Ready
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Engagement Grid -->
+<section class="w-full bg-surface py-section-padding-min">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- Left: Interactive Technical Brief Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 md:p-10 rounded-DEFAULT shadow-sm flex flex-col">
+<div class="flex items-center justify-between pb-space-md">
+<div>
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary uppercase tracking-[0.18em]">PROTOCOL 01</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Project Scoping Brief</h2>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 bg-surface-container text-outline rounded-full font-code-spec text-code-spec">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="">DIRECT INGEST</span>
+</div>
+</div>
+<form class="flex flex-col space-y-space-lg pt-space-md" id="scopingForm" onsubmit="event.preventDefault(); triggerSubmitFeedback();">
+<!-- Group 1: Contact Details -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">01 // IDENTITY &amp; STAKEHOLDER</span>
+<span class="font-code-spec text-code-spec text-outline">REQUIRED</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col space-y-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="fullName">Full Name</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded text-sm placeholder:text-outline/50 focus:outline-none focus:bg-surface-container-low transition-colors" id="fullName" placeholder="Dr. Alex Vance" required="" type="text"/>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="workEmail">Corporate Email</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded text-sm placeholder:text-outline/50 focus:outline-none focus:bg-surface-container-low transition-colors" id="workEmail" placeholder="alex@consortium.io" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col space-y-1 pt-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="companyOrg">Company / Organization &amp; Current URL</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded text-sm placeholder:text-outline/50 focus:outline-none focus:bg-surface-container-low transition-colors" id="companyOrg" placeholder="Apex Systems (https://apex.systems)" type="text"/>
+</div>
+</div>
+<!-- Group 2: Engagement Type -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">02 // ENGAGEMENT ARCHETYPE</span>
+<span class="font-code-spec text-code-spec text-primary">SELECT ONE</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="engagementGroup">
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<input checked="" class="accent-primary w-4 h-4" name="engagement" type="radio" value="fullstack"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Full-Stack Web App</span>
+</label>
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="engagement" type="radio" value="headless"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Headless Commerce</span>
+</label>
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="engagement" type="radio" value="redesign"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">System Redesign &amp; UI</span>
+</label>
+<label class="cursor-pointer flex items-center gap-3 p-3.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="engagement" type="radio" value="devops"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">DevOps &amp; Infrastructure</span>
+</label>
+<label class="cursor-pointer sm:col-span-2 flex items-center gap-3 p-3.5 rounded bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<input class="accent-primary w-4 h-4" name="engagement" type="radio" value="retainer"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Dedicated Engineering Retainer / Fractional CTO</span>
+</label>
+</div>
+</div>
+<!-- Group 3: Tech Ecosystem Selection -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">03 // TARGET ARCHITECTURE &amp; STACK</span>
+<span class="font-code-spec text-code-spec text-outline">MULTI-SELECT</span>
+</div>
+<div class="flex flex-wrap gap-2" id="techStackTags">
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-primary-container text-on-primary font-semibold transition-all" onclick="toggleChip(this)" type="button">Next.js / React</button>
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="toggleChip(this)" type="button">Node.js / TypeScript</button>
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="toggleChip(this)" type="button">PostgreSQL / Supabase</button>
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="toggleChip(this)" type="button">Shopify / Hydrogen</button>
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="toggleChip(this)" type="button">AWS / Cloudflare Edge</button>
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="toggleChip(this)" type="button">GraphQL / REST</button>
+<button class="px-3.5 py-1.5 rounded-full font-code-spec text-code-spec bg-surface-container text-on-surface hover:bg-surface-container-high transition-all" onclick="toggleChip(this)" type="button">Tailwind CSS / Design System</button>
+</div>
+</div>
+<!-- Group 4: Timeline & Target Capital -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">04 // HORIZON &amp; ALLOCATED CAPITAL</span>
+<span class="font-code-spec text-code-spec text-outline">USD / EUR</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col space-y-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="timeline">Target Delivery Horizon</label>
+<select class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded text-sm focus:outline-none focus:bg-surface-container-low transition-colors" id="timeline">
+<option value="rapid">&lt; 1 Month (Fast Sprint)</option>
+<option selected="" value="standard">1 – 3 Months (Standard MVP / Platform)</option>
+<option value="expanded">3 – 6 Months (Enterprise Rebuild)</option>
+<option value="continuous">Ongoing Advisory &amp; Retainer</option>
+</select>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-ui text-label-ui text-on-surface">Target Budget Envelope</label>
+<div class="grid grid-cols-2 gap-1.5">
+<label class="cursor-pointer text-center py-2.5 px-2 rounded bg-surface-container-low hover:bg-surface-container-high text-xs font-semibold text-on-surface flex items-center justify-center gap-1">
+<input class="accent-primary" name="budget" type="radio" value="5-10k"/>
+<span class="">$5k – $10k</span>
+</label>
+<label class="cursor-pointer text-center py-2.5 px-2 rounded bg-surface-container-low hover:bg-surface-container-high text-xs font-semibold text-on-surface flex items-center justify-center gap-1">
+<input checked="" class="accent-primary" name="budget" type="radio" value="10-25k"/>
+<span class="">$10k – $25k</span>
+</label>
+<label class="cursor-pointer text-center py-2.5 px-2 rounded bg-surface-container-low hover:bg-surface-container-high text-xs font-semibold text-on-surface flex items-center justify-center gap-1">
+<input class="accent-primary" name="budget" type="radio" value="25-50k"/>
+<span class="">$25k – $50k</span>
+</label>
+<label class="cursor-pointer text-center py-2.5 px-2 rounded bg-surface-container-low hover:bg-surface-container-high text-xs font-semibold text-on-surface flex items-center justify-center gap-1">
+<input class="accent-primary" name="budget" type="radio" value="50k+"/>
+<span class="">$50k+</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Group 5: Architecture Brief & Specs -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">05 // TECHNICAL BRIEF &amp; SYSTEM BOTTLENECKS</span>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="briefText">System Objectives &amp; Known Inefficiencies</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded text-sm placeholder:text-outline/50 focus:outline-none focus:bg-surface-container-low transition-colors" id="briefText" placeholder="Outline product objectives, concurrency goals, legacy codebase hurdles, or specific architecture requirements..." required="" rows="4"></textarea>
+</div>
+<div class="flex flex-col space-y-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="specsLink">PRD, Figma Blueprint, or Repository Link (Optional)</label>
+<div class="flex items-center bg-surface-container-lowest px-3 py-1 rounded focus-within:bg-surface-container-low">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">link</span>
+<input class="w-full bg-transparent text-on-surface py-2 text-sm focus:outline-none placeholder:text-outline/50" id="specsLink" placeholder="https://github.com/... or https://figma.com/file/..." type="url"/>
+</div>
+</div>
+</div>
+<!-- Group 06: Attachments & Target Delivery Milestones -->
+<div class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-eyebrow-sm text-eyebrow-sm text-outline uppercase tracking-wider">06 // ATTACHMENTS &amp; SPECIFICATION ASSETS</span>
+<span class="font-code-spec text-code-spec text-outline">OPTIONAL</span>
+</div>
+<!-- Drag and drop zone -->
+<div class="border border-dashed border-outline-variant hover:border-primary-container rounded p-6 bg-surface-container-low/60 hover:bg-surface-container-low transition-all duration-200 flex flex-col items-center justify-center text-center cursor-pointer group" id="dropZone">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center mb-2 group-hover:bg-primary-container transition-colors dropzone-icon-box">
+<span class="material-symbols-outlined text-primary group-hover:text-surface-container-lowest text-[22px] transition-colors dropzone-icon">upload_file</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium pointer-events-none">Drop architectural diagrams, PRD, RFP, or system schematics here</p>
+<p class="font-body-sm text-body-sm text-outline text-xs mt-1 pointer-events-none">or <span class="text-primary font-semibold underline underline-offset-2 hover:text-primary-container">browse files</span> from your local filesystem</p>
+<p class="font-code-spec text-[10px] text-outline tracking-wider mt-2 uppercase pointer-events-none">PDF, DOCX, FIG, PNG, ZIP up to 50MB. All files encrypted via AES-256 in transit and at rest.</p>
+<input class="hidden" id="fileUploadInput" multiple="" type="file"/>
+</div>
+<!-- Uploaded file badge / preview container -->
+<div class="flex flex-col space-y-2" id="fileListContainer">
+<!-- File 1: Verified / Completed -->
+<div class="file-item p-3 rounded bg-surface-container-low border border-surface-variant flex flex-col gap-1.5 transition-all duration-300 overflow-hidden" data-size="4.8" data-status="completed">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-spec text-code-spec text-on-surface truncate font-semibold">HerbCodes_System_Architecture_v2.pdf</span>
+<div class="flex items-center gap-2 text-[10px] font-code-spec text-outline uppercase tracking-wider">
+<span>4.8 MB</span>
+<span>•</span>
+<span class="text-secondary font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>VERIFIED &amp; ENCRYPTED</span>
+</div>
+</div>
+</div>
+<button aria-label="Remove attached file" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- File 2: Active Uploading In-Progress -->
+<div class="file-item p-3 rounded bg-surface-container-lowest border border-primary-container shadow-sm flex flex-col gap-2 transition-all duration-300 overflow-hidden" data-size="18.2" data-status="transfer">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded bg-primary-container/10 flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-spec text-code-spec text-on-surface truncate font-semibold">Figma_Design_Tokens_Export.fig</span>
+<div class="flex items-center gap-2 text-[10px] font-code-spec text-outline uppercase tracking-wider">
+<span class="text-primary font-bold progress-percent-text">68%</span>
+<span>•</span>
+<span class="progress-size-text">12.4 MB of 18.2 MB</span>
+<span>•</span>
+<span class="text-on-surface-variant font-medium">2.4 MB/s</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0">
+<button aria-label="Pause upload" class="pause-upload-btn text-outline hover:text-primary transition-colors p-1 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">pause</span>
+</button>
+<button aria-label="Cancel upload" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="progress-bar-fill bg-primary-container h-full rounded-full transition-all duration-300" style="width: 68%;"></div>
+</div>
+</div>
+<!-- File 3: Queued / Integrity Scan -->
+<div class="file-item p-3 rounded bg-surface-container-low/60 border border-surface-variant flex flex-col gap-1.5 transition-all duration-300 overflow-hidden" data-size="1.1" data-status="pending">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-outline shrink-0">
+<span class="material-symbols-outlined text-[18px]">pending</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-code-spec text-code-spec text-on-surface truncate font-medium">PostgreSQL_Schema_Dump.sql.zip</span>
+<div class="flex items-center gap-2 text-[10px] font-code-spec text-outline uppercase tracking-wider">
+<span>1.1 MB</span>
+<span>•</span>
+<span class="text-outline font-semibold">QUEUED // PENDING INTEGRITY SCAN</span>
+</div>
+</div>
+</div>
+<button aria-label="Cancel queue" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- File 4: Validation Failed / Oversized File State -->
+<div class="file-item p-3 rounded bg-error-container/30 border border-error/30 flex flex-col gap-2 transition-all duration-300 overflow-hidden" data-size="78.4" data-status="rejected">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-7 h-7 rounded bg-error/10 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined text-[18px]">error</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-code-spec text-code-spec text-on-surface truncate font-semibold">Raw_Production_Database_Backup.dump</span>
+<span class="px-1.5 py-0.5 rounded bg-error/15 text-error font-code-spec text-[10px] font-bold tracking-wider uppercase">FAILED</span>
+</div>
+<div class="flex items-center gap-2 text-[10px] font-code-spec text-error uppercase tracking-wider font-semibold">
+<span>78.4 MB</span>
+<span>•</span>
+<span>VALIDATION_FAILED: FILE_SIZE_EXCEEDED (78.4 MB &gt; 50 MB LIMIT)</span>
+</div>
+</div>
+</div>
+<button aria-label="Dismiss rejected file" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center shrink-0" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex items-center justify-between pt-1 border-t border-error/15 text-[11px] font-code-spec">
+<span class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-error">warning</span>
+        Exceeds 50MB protocol maximum. Please compress or link via repository field below.
+      </span>
+<a class="text-error hover:underline font-semibold uppercase tracking-wider inline-flex items-center gap-0.5" href="#specsLink">
+<span>Link Instead</span>
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Batch Summary Telemetry Bar & Action -->
+<div class="flex flex-wrap items-center justify-between pt-1 px-1 text-outline font-code-spec text-code-spec" id="telemetryBar">
+<div class="flex items-center gap-1.5 text-[11px] uppercase tracking-wider" id="telemetryStats">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="text-on-surface-variant font-medium" id="telemetryCountSize">4 files (102.5 MB)</span>
+<span>•</span>
+<span id="telemetryBreakdown">1 completed, 1 in transfer, 1 pending, <span class="text-error font-semibold inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>1 rejected</span></span>
+</div>
+<button class="text-primary hover:text-secondary font-semibold text-[11px] uppercase tracking-wider hover:underline flex items-center gap-1 transition-colors" id="addMoreFilesBtn" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Add more files</span>
+</button>
+</div>
+<!-- Target Launch Milestones / Expected Date -->
+<div class="flex flex-col space-y-1 pt-1">
+<label class="font-label-ui text-label-ui text-on-surface" for="launchDateTarget">Target Launch Date / Critical Milestones (Optional)</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-4 py-3 rounded text-sm placeholder:text-outline/50 focus:outline-none focus:bg-surface-container-low transition-colors" id="launchDateTarget" placeholder="e.g., Q3 2026 Beta, MVP by October 15, or investor demo deadline" type="text"/>
+</div>
+</div>
+<!-- Submit Action -->
+<div class="pt-space-md flex flex-col space-y-space-sm">
+<button class="w-full py-3.5 px-8 rounded-full bg-primary-container text-on-primary font-body-md text-body-md font-semibold hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors flex items-center justify-center gap-space-sm shadow-sm group" id="submitBtn" type="submit">
+<span class="inline-flex items-center gap-2" id="btnContent">
+<span class="" id="btnText">Transmit Technical Brief</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" id="btnIcon">arrow_forward</span>
+</span>
+</button>
+<div class="flex items-start gap-space-xs text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-primary mt-0.5">verified_user</span>
+<span class="">Strict mutual NDA enforced upon receipt. All client schematics and IP remain under exclusive ownership.</span>
+</div>
+</div>
+</form>
+</div>
+<!-- Right: Studio Telemetry, Triage Protocol, and Office Details -->
+<div class="lg:col-span-5 flex flex-col space-y-gutter">
+<!-- Card 1: Direct Engineering Channels -->
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-DEFAULT shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary tracking-wider uppercase">DIRECT ACCESS</span>
+<span class="font-code-spec text-code-spec text-outline">SECURE / VERIFIED</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-outline uppercase block mb-1">Direct Engineering Dispatch</span>
+<div class="flex items-center justify-between gap-2 p-3 rounded bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-primary select-all">hello@herbcodes.com</span>
+<button class="p-2 rounded hover:bg-surface-container text-outline hover:text-on-surface transition-colors" id="copyBtn" onclick="copyEmail()" title="Copy to clipboard" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+</div>
+<span class="text-xs text-secondary font-semibold hidden mt-1" id="copyNotice">Copied to clipboard.</span>
+</div>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div>
+<span class="font-body-sm text-body-sm text-outline block mb-1">HQ Coordinates</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">Ogun State</p>
+<p class="font-body-sm text-body-sm text-outline">Nigeria (WAT / UTC+1)</p>
+</div>
+<div>
+<span class="font-body-sm text-body-sm text-outline block mb-1">Engine Operating Hours</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">08:00 – 18:00</p>
+<p class="font-body-sm text-body-sm text-outline">Mon – Fri (WAT)</p>
+</div>
+</div>
+<div class="p-space-sm rounded bg-surface-container-low flex items-center gap-space-sm text-outline font-code-spec text-code-spec">
+<span class="material-symbols-outlined text-primary text-[18px]">lock</span>
+<span class="">PGP FINGERPRINT: 4C7D 89FA 11B2 C901 88FA</span>
+</div>
+</div>
+<!-- Card 2: Deterministic Triage Protocol -->
+<div class="bg-surface-container-lowest p-6 md:p-8 rounded-DEFAULT shadow-sm flex flex-col space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary tracking-wider uppercase">TRIAGE PIPELINE</span>
+<span class="font-code-spec text-code-spec text-outline">3 STAGES</span>
+</div>
+<div class="relative flex flex-col space-y-space-md pl-4">
+<!-- Timeline indicator line -->
+<div class="absolute left-1 top-2 bottom-2 w-0.5 bg-surface-container-highest"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col space-y-1">
+<span class="absolute -left-[19px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-2">
+<span class="font-code-spec text-code-spec text-primary">STAGE 01</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base font-semibold">Technical Scoping Review</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+                  Principal architect parses your tech stack, concurrency metrics, and operational goals within 24 hours.
+                </p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col space-y-1">
+<span class="absolute -left-[19px] top-1.5 w-2.5 h-2.5 rounded-full bg-surface-variant ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-2">
+<span class="font-code-spec text-code-spec text-outline">STAGE 02</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base font-semibold">Feasibility &amp; TRD Session</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+                  A focused 45-minute technical discovery call with our lead systems engineer to map data schemas, edge cases, and milestones.
+                </p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col space-y-1">
+<span class="absolute -left-[19px] top-1.5 w-2.5 h-2.5 rounded-full bg-surface-variant ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-2">
+<span class="font-code-spec text-code-spec text-outline">STAGE 03</span>
+<span class="font-headline-sm text-headline-sm text-on-surface text-base font-semibold">Deterministic Roadmap</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline">
+                  Fixed pricing, defined sprint dates, architecture diagrams, and service level agreements delivered before commitment.
+                </p>
+</div>
+</div>
+</div>
+<!-- Card 3: Priority Intervention & Retainers -->
+<div class="bg-surface-container-low p-6 md:p-8 rounded-DEFAULT shadow-sm flex flex-col space-y-space-sm relative overflow-hidden">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">bolt</span>
+<span class="font-eyebrow-sm text-eyebrow-sm text-secondary uppercase tracking-widest">EXPEDITED AUDIT PIPELINE</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Emergency System Rescues &amp; Audits</h3>
+<p class="font-body-sm text-body-sm text-outline">
+              Experiencing production bottlenecks, security vulnerabilities, or an abandoned codebase? Add <code class="px-1.5 py-0.5 rounded bg-surface-container-highest text-primary font-code-spec text-code-spec font-bold">URGENT AUDIT</code> to your inquiry brief for prioritized same-day triage.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Studio Capabilities Snapshot (Visual Architecture Matrix) -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary tracking-widest uppercase">ENGINEERING STANDARDS</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Disciplined Deliverables</h2>
+</div>
+<p class="font-body-sm text-body-sm text-outline max-w-md">
+          Zero black-box solutions. Every engagement ships with strict automated test coverage, modular documentation, and deployment playbooks.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col space-y-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">speed</span>
+<span class="font-headline-sm text-headline-sm text-base text-on-surface font-semibold">Sub-100ms TTFB</span>
+<p class="font-body-sm text-body-sm text-outline">Edge caching and static route optimization built to pass Google Core Web Vitals comfortably.</p>
+</div>
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col space-y-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">shield</span>
+<span class="font-headline-sm text-headline-sm text-base text-on-surface font-semibold">Strict IP Clearance</span>
+<p class="font-body-sm text-body-sm text-outline">Complete transfer of repository copyright, infrastructure configs, and design token assets upon sprint signoff.</p>
+</div>
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col space-y-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">architecture</span>
+<span class="font-headline-sm text-headline-sm text-base text-on-surface font-semibold">Self-Documenting Code</span>
+<p class="font-body-sm text-body-sm text-outline">Clean TypeScript typings, component storybooks, and OpenAPI schemas for friction-free onboarding.</p>
+</div>
+<div class="p-space-md rounded-DEFAULT bg-surface-container-low flex flex-col space-y-space-xs">
+<span class="material-symbols-outlined text-primary text-[28px]">cycle</span>
+<span class="font-headline-sm text-headline-sm text-base text-on-surface font-semibold">Deterministic CI/CD</span>
+<p class="font-body-sm text-body-sm text-outline">Automated build and preview matrix on GitHub Actions or GitLab with staging parity.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Scoping FAQs Accordion -->
+<section class="w-full bg-surface py-section-padding-min">
+<div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-3xl mb-space-lg">
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary tracking-widest uppercase">SPECIFICATION FAQS</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Frequently analyzed requirements.</h2>
+<p class="font-body-md text-body-md text-outline mt-2">
+          Architectural clarity before the first line of code is committed. Review our operational parameters below.
+        </p>
+</div>
+<div class="flex flex-col space-y-3 max-w-4xl">
+<!-- Accordion Item 1 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm">
+<button class="w-full p-6 text-left flex items-center justify-between hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq1')" type="button">
+<span class="font-headline-sm text-headline-sm text-base md:text-lg text-on-surface">How do we handle code ownership and intellectual property?</span>
+<span class="material-symbols-outlined text-outline transition-transform" id="faq1-icon">add</span>
+</button>
+<div class="hidden px-6 pb-6 pt-0 font-body-md text-body-md text-outline" id="faq1">
+            HerbCodes enforces a strict clean-slate handoff. All software architecture, bespoke libraries, design files, and deployment automation scripts are 100% assigned to your entity upon milestone settlement. We operate with zero proprietary vendor lock-in or recurring licensing fees.
+          </div>
+</div>
+<!-- Accordion Item 2 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm">
+<button class="w-full p-6 text-left flex items-center justify-between hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq2')" type="button">
+<span class="font-headline-sm text-headline-sm text-base md:text-lg text-on-surface">Do you execute mutual NDAs prior to technical discovery calls?</span>
+<span class="material-symbols-outlined text-outline transition-transform" id="faq2-icon">add</span>
+</button>
+<div class="hidden px-6 pb-6 pt-0 font-body-md text-body-md text-outline" id="faq2">
+            Yes. Prior to reviewing proprietary repositories, internal Figma workspaces, or confidential PRDs, we provide a standard bilateral non-disclosure agreement or sign your organization’s standard legal document.
+          </div>
+</div>
+<!-- Accordion Item 3 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm">
+<button class="w-full p-6 text-left flex items-center justify-between hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq3')" type="button">
+<span class="font-headline-sm text-headline-sm text-base md:text-lg text-on-surface">What is the typical timeline from brief submission to project kickoff?</span>
+<span class="material-symbols-outlined text-outline transition-transform" id="faq3-icon">add</span>
+</button>
+<div class="hidden px-6 pb-6 pt-0 font-body-md text-body-md text-outline" id="faq3">
+            Our pipeline is engineered for rapid velocity: initial brief triage is completed in &lt;24 hours, discovery and Technical Requirements Document (TRD) delivery takes 2–3 days, and development sprints commence within 5 business days of scope approval.
+          </div>
+</div>
+<!-- Accordion Item 4 -->
+<div class="bg-surface-container-lowest rounded-DEFAULT overflow-hidden shadow-sm">
+<button class="w-full p-6 text-left flex items-center justify-between hover:bg-surface-container-low transition-colors" onclick="toggleAccordion('faq4')" type="button">
+<span class="font-headline-sm text-headline-sm text-base md:text-lg text-on-surface">Can HerbCodes integrate directly into existing in-house engineering squads?</span>
+<span class="material-symbols-outlined text-outline transition-transform" id="faq4-icon">add</span>
+</button>
+<div class="hidden px-6 pb-6 pt-0 font-body-md text-body-md text-outline" id="faq4">
+            We frequently embed as a specialized unit or fractional architecture leads. We integrate with your existing Git repositories, Slack or Linear workspaces, and participate in daily asynchronous standups without disrupting existing team dynamics.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Modal: Submission Notification Modal -->
+<div aria-hidden="true" aria-modal="true" class="fixed inset-0 z-[100] flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none" id="submissionModal" role="dialog">
+<!-- Backdrop with dark blur -->
+<div class="absolute inset-0 bg-[#0a0f14]/75 backdrop-blur-md transition-opacity duration-300" id="modalBackdrop"></div>
+<!-- Modal Window -->
+<div class="relative w-full max-w-2xl bg-surface-container-lowest rounded-DEFAULT shadow-2xl border border-outline-variant/30 flex flex-col overflow-hidden max-h-[90vh] z-10 transform scale-95 transition-transform duration-300" id="modalContainer">
+<!-- Modal Header -->
+<div class="p-6 md:p-8 bg-surface-container-low/80 border-b border-surface-variant flex items-start justify-between relative">
+<div class="flex flex-col space-y-1.5 pr-8">
+<div class="inline-flex items-center gap-2 text-primary font-eyebrow-sm text-eyebrow-sm tracking-[0.2em]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-container"></span>
+</span>
+<span>PROTOCOL // DISPATCH CONFIRMED</span>
+</div>
+<h3 class="font-headline-sm text-2xl md:text-[28px] text-on-surface leading-tight tracking-tight">Technical Brief Transmitted.</h3>
+<p class="font-code-spec text-code-spec text-outline">
+Transmission ID: <span class="text-primary font-semibold select-all" id="modalTransmissionId">HC-BRF-2026-9F82A</span> • AES-256 Ingested
+</p>
+</div>
+<!-- Close Button -->
+<button aria-label="Close modal dialog" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors shrink-0" onclick="closeSubmissionModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Scrollable) -->
+<div class="p-6 md:p-8 overflow-y-auto space-y-6">
+<p class="font-body-md text-body-md text-on-surface-variant">
+Your architectural specifications and client brief have been ingested at the HerbCodes Primary Engineering Gateway with end-to-end cryptographic verification.
+</p>
+<!-- Telemetry & Summary Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 bg-surface-container-low p-4 rounded-DEFAULT border border-surface-variant/70 text-sm">
+<div class="flex flex-col space-y-1">
+<span class="font-eyebrow-sm text-[11px] text-outline uppercase tracking-wider">01 // TARGET ARCHITECTURE</span>
+<span class="font-code-spec text-xs text-on-surface font-semibold truncate" id="modalTechStack">Next.js, Node.js, PostgreSQL</span>
+</div>
+<div class="flex flex-col space-y-1">
+<span class="font-eyebrow-sm text-[11px] text-outline uppercase tracking-wider">02 // HORIZON &amp; ALLOCATED CAPITAL</span>
+<span class="font-code-spec text-xs text-on-surface font-semibold truncate" id="modalTimelineBudget">1 – 3 Months // $10k – $25k</span>
+</div>
+<div class="flex flex-col space-y-1">
+<span class="font-eyebrow-sm text-[11px] text-outline uppercase tracking-wider">03 // INGESTED ATTACHMENTS</span>
+<span class="font-code-spec text-xs text-secondary font-semibold flex items-center gap-1.5" id="modalAttachmentsSummary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>3 assets verified &amp; AES-256 encrypted</span>
+</span>
+</div>
+<div class="flex flex-col space-y-1">
+<span class="font-eyebrow-sm text-[11px] text-outline uppercase tracking-wider">04 // PGP SIGNATURE</span>
+<span class="font-code-spec text-xs text-outline font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">lock</span>
+<span class="truncate">4C7D 89FA 11B2 C901 88FA</span>
+</span>
+</div>
+</div>
+<!-- Next Steps Triage Timeline / SLA Card -->
+<div class="rounded-DEFAULT border border-primary-container/30 bg-primary-container/5 p-4 sm:p-5 flex flex-col space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<span class="font-eyebrow-sm text-eyebrow-sm text-primary uppercase tracking-widest">NEXT STEPS &amp; RESPONSE GUARANTEE</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/15 text-primary font-code-spec text-[10px] font-bold tracking-wider uppercase">&lt; 24H SLA</span>
+</div>
+<ul class="space-y-2 font-body-sm text-body-sm text-outline">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">check_circle</span>
+<span>A Lead Principal Architect reviews your technical objectives and validates dependencies.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">event_available</span>
+<span>Direct email invite to coordinate the 45-minute Feasibility &amp; Technical Requirements Document (TRD) session.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[16px] mt-0.5 shrink-0">mail</span>
+<span>Urgent queries or scope revisions can reference this transmission ID directly at <a class="text-primary hover:underline font-semibold" href="mailto:hello@herbcodes.com">hello@herbcodes.com</a>.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Modal Actions -->
+<div class="p-6 md:p-8 pt-2 pb-6 bg-surface-container-lowest border-t border-surface-variant flex flex-col sm:flex-row items-center justify-between gap-3">
+<div class="flex items-center gap-2 w-full sm:w-auto order-2 sm:order-1">
+<button class="w-full sm:w-auto px-4 py-2.5 rounded-full border border-outline-variant hover:bg-surface-container-low text-outline hover:text-on-surface font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1.5" onclick="downloadReceiptJSON()" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+<span>Download Receipt (.JSON)</span>
+</button>
+</div>
+<div class="flex items-center gap-2 w-full sm:w-auto order-1 sm:order-2">
+<button class="w-full sm:w-auto px-6 py-2.5 rounded-full bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors shadow-sm flex items-center justify-center gap-1.5" onclick="closeSubmissionModal()" type="button">
+<span>Acknowledge Protocol</span>
+<span class="material-symbols-outlined text-[16px]">done</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Logic -->
+<script>
+    function toggleChip(button) {
+      const isSelected = button.classList.contains('bg-primary-container');
+      if (isSelected) {
+        button.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+        button.classList.add('bg-surface-container', 'text-on-surface');
+      } else {
+        button.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+        button.classList.remove('bg-surface-container', 'text-on-surface');
+      }
+    }
+
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(id + '-icon');
+      const isHidden = content.classList.contains('hidden');
+      
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.innerText = 'remove';
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.innerText = 'add';
+        icon.classList.remove('rotate-180');
+      }
+    }
+
+    function copyEmail() {
+      navigator.clipboard.writeText('hello@herbcodes.com').then(() => {
+        const notice = document.getElementById('copyNotice');
+        notice.classList.remove('hidden');
+        setTimeout(() => {
+          notice.classList.add('hidden');
+        }, 3000);
+      });
+    }
+
+    let activeTransmissionData = null;
+
+    function triggerSubmitFeedback() {
+      const btn = document.getElementById('submitBtn');
+      const btnContent = document.getElementById('btnContent');
+      if (!btn || btn.disabled) return;
+
+      btn.disabled = true;
+      btn.classList.add('opacity-90', 'cursor-not-allowed');
+
+      // State with pulsing cyan indicator
+      btnContent.innerHTML = `
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-surface-container-lowest opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-surface-container-lowest"></span>
+        </span>
+        <span class="font-semibold">Transmitting Brief...</span>
+      `;
+
+      // Simulate network ingest + cryptographic packaging (~650ms)
+      setTimeout(() => {
+        openSubmissionModal();
+      }, 650);
+    }
+
+    function openSubmissionModal() {
+      const modal = document.getElementById('submissionModal');
+      const container = document.getElementById('modalContainer');
+      const idEl = document.getElementById('modalTransmissionId');
+      const techStackEl = document.getElementById('modalTechStack');
+      const timelineBudgetEl = document.getElementById('modalTimelineBudget');
+      const attachmentsSummaryEl = document.getElementById('modalAttachmentsSummary');
+
+      // Generate deterministic hash
+      const randomHex = Math.random().toString(36).substring(2, 7).toUpperCase();
+      const transmissionId = `HC-BRF-2026-${randomHex}`;
+      if (idEl) idEl.innerText = transmissionId;
+
+      // Collect selected tech chips
+      const chips = Array.from(document.querySelectorAll('#techStackTags button.bg-primary-container'))
+        .map(b => b.innerText.trim());
+      const stackSummary = chips.length > 0 ? chips.slice(0, 3).join(', ') + (chips.length > 3 ? ` +${chips.length - 3}` : '') : 'Standard Modular Architecture';
+      if (techStackEl) techStackEl.innerText = stackSummary;
+
+      // Collect timeline and budget
+      const timelineSelect = document.getElementById('timeline');
+      const timelineText = timelineSelect ? timelineSelect.options[timelineSelect.selectedIndex].text.split('(')[0].trim() : '1 – 3 Months';
+      const checkedBudget = document.querySelector('input[name="budget"]:checked');
+      const budgetText = checkedBudget ? checkedBudget.value.replace('k', ',000').replace('50+', '$50k+') : '$10k – $25k';
+      const formattedBudget = checkedBudget && checkedBudget.value === '10-25k' ? '$10k – $25k' : checkedBudget && checkedBudget.value === '5-10k' ? '$5k – $10k' : checkedBudget && checkedBudget.value === '25-50k' ? '$25k – $50k' : '$50k+';
+      if (timelineBudgetEl) timelineBudgetEl.innerText = `${timelineText} // ${formattedBudget}`;
+
+      // Attachment count
+      const fileItems = document.querySelectorAll('#fileListContainer .file-item:not([data-status="rejected"])');
+      const fileCount = fileItems.length;
+      if (attachmentsSummaryEl) {
+        attachmentsSummaryEl.innerHTML = `
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          <span>${fileCount} ${fileCount === 1 ? 'asset' : 'assets'} verified &amp; AES-256 encrypted</span>
+        `;
+      }
+
+      // Store payload for JSON receipt download
+      const nameInput = document.getElementById('fullName');
+      const emailInput = document.getElementById('workEmail');
+      const orgInput = document.getElementById('companyOrg');
+      const briefInput = document.getElementById('briefText');
+
+      activeTransmissionData = {
+        transmission_id: transmissionId,
+        timestamp: new Date().toISOString(),
+        identity: {
+          name: nameInput ? nameInput.value : '',
+          email: emailInput ? emailInput.value : '',
+          organization: orgInput ? orgInput.value : ''
+        },
+        target_architecture: chips,
+        horizon_and_budget: {
+          horizon: timelineText,
+          budget_envelope: formattedBudget
+        },
+        pgp_fingerprint: "4C7D 89FA 11B2 C901 88FA",
+        sla: "<24h discovery response guarantee (WAT/UTC+1)"
+      };
+
+      // Show modal
+      if (modal && container) {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100', 'pointer-events-auto');
+        container.classList.remove('scale-95');
+        container.classList.add('scale-100');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeSubmissionModal() {
+      const modal = document.getElementById('submissionModal');
+      const container = document.getElementById('modalContainer');
+      const btn = document.getElementById('submitBtn');
+      const btnContent = document.getElementById('btnContent');
+
+      if (modal && container) {
+        modal.classList.remove('opacity-100', 'pointer-events-auto');
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        container.classList.remove('scale-100');
+        container.classList.add('scale-95');
+        document.body.style.overflow = '';
+      }
+
+      // Reset submit button cleanly
+      if (btn && btnContent) {
+        btn.disabled = false;
+        btn.classList.remove('opacity-90', 'cursor-not-allowed');
+        btnContent.innerHTML = `
+          <span id="btnText">Transmit Technical Brief</span>
+          <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" id="btnIcon">arrow_forward</span>
+        `;
+      }
+    }
+
+    function downloadReceiptJSON() {
+      const payload = activeTransmissionData || {
+        transmission_id: document.getElementById('modalTransmissionId')?.innerText || "HC-BRF-2026-9F82A",
+        timestamp: new Date().toISOString(),
+        gateway: "HerbCodes Primary Dispatch (WAT/UTC+1)",
+        pgp_signature: "4C7D 89FA 11B2 C901 88FA",
+        status: "Ingested & Encrypted"
+      };
+
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(payload, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `${payload.transmission_id || 'HerbCodes_Transmission'}_Receipt.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    // Modal click-outside backdrop & ESC listener
+    document.addEventListener('DOMContentLoaded', () => {
+      const backdrop = document.getElementById('modalBackdrop');
+      if (backdrop) {
+        backdrop.addEventListener('click', () => {
+          closeSubmissionModal();
+        });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          const modal = document.getElementById('submissionModal');
+          if (modal && !modal.classList.contains('pointer-events-none')) {
+            closeSubmissionModal();
+          }
+        }
+      });
+    });
+
+    // ==========================================
+    // File Management, Drag & Drop, & Telemetry
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+      const dropZone = document.getElementById('dropZone');
+      const fileInput = document.getElementById('fileUploadInput');
+      const fileListContainer = document.getElementById('fileListContainer');
+      const addMoreBtn = document.getElementById('addMoreFilesBtn');
+      const MAX_SIZE_BYTES = 50 * 1024 * 1024; // 50MB
+
+      // Wire existing initial close buttons
+      bindRemovalButtons(document);
+
+      // Trigger file selector from Dropzone or Add More button
+      if (dropZone && fileInput) {
+        dropZone.addEventListener('click', (e) => {
+          fileInput.click();
+        });
+
+        // Drag & Drop Highlight Listeners
+        ['dragenter', 'dragover'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.add('border-primary-container', 'bg-primary-container/10', 'ring-2', 'ring-primary-container/40');
+            const icon = dropZone.querySelector('.dropzone-icon');
+            if (icon) icon.classList.add('scale-110');
+          });
+        });
+
+        ['dragleave', 'dragend'].forEach(eventName => {
+          dropZone.addEventListener(eventName, (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            dropZone.classList.remove('border-primary-container', 'bg-primary-container/10', 'ring-2', 'ring-primary-container/40');
+            const icon = dropZone.querySelector('.dropzone-icon');
+            if (icon) icon.classList.remove('scale-110');
+          });
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropZone.classList.remove('border-primary-container', 'bg-primary-container/10', 'ring-2', 'ring-primary-container/40');
+          const icon = dropZone.querySelector('.dropzone-icon');
+          if (icon) icon.classList.remove('scale-110');
+
+          if (e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+            handleFiles(e.dataTransfer.files);
+          }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+          if (fileInput.files && fileInput.files.length > 0) {
+            handleFiles(fileInput.files);
+            fileInput.value = ''; // Reset so the same file can be re-uploaded if needed
+          }
+        });
+      }
+
+      if (addMoreBtn && fileInput) {
+        addMoreBtn.addEventListener('click', () => {
+          fileInput.click();
+        });
+      }
+
+      function handleFiles(files) {
+        Array.from(files).forEach((file, index) => {
+          // Stagger simulated uploads slightly if multiple files
+          setTimeout(() => {
+            processFile(file);
+          }, index * 200);
+        });
+      }
+
+      function processFile(file) {
+        const sizeInMB = (file.size / (1024 * 1024)).toFixed(1);
+        const isOversized = file.size > MAX_SIZE_BYTES;
+
+        if (isOversized) {
+          createRejectedCard(file.name, sizeInMB);
+        } else {
+          createActiveUploadingCard(file.name, sizeInMB);
+        }
+        updateTelemetry();
+      }
+
+      function createRejectedCard(fileName, sizeMB) {
+        const card = document.createElement('div');
+        card.className = 'file-item p-3 rounded bg-error-container/30 border border-error/30 flex flex-col gap-2 transition-all duration-300 overflow-hidden';
+        card.dataset.status = 'rejected';
+        card.dataset.size = sizeMB;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-7 h-7 rounded bg-error/10 flex items-center justify-center text-error shrink-0">
+                <span class="material-symbols-outlined text-[18px]">error</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <div class="flex items-center gap-2">
+                  <span class="font-code-spec text-code-spec text-on-surface truncate font-semibold">${escapeHtml(fileName)}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-error/15 text-error font-code-spec text-[10px] font-bold tracking-wider uppercase">FAILED</span>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] font-code-spec text-error uppercase tracking-wider font-semibold">
+                  <span>${sizeMB} MB</span>
+                  <span>•</span>
+                  <span>VALIDATION_FAILED: FILE_SIZE_EXCEEDED (${sizeMB} MB &gt; 50 MB LIMIT)</span>
+                </div>
+              </div>
+            </div>
+            <button aria-label="Dismiss rejected file" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center shrink-0" type="button">
+              <span class="material-symbols-outlined text-[16px]">close</span>
+            </button>
+          </div>
+          <div class="flex items-center justify-between pt-1 border-t border-error/15 text-[11px] font-code-spec">
+            <span class="text-on-surface-variant flex items-center gap-1">
+              <span class="material-symbols-outlined text-[14px] text-error">warning</span>
+              Exceeds 50MB protocol maximum. Please compress or link via repository field below.
+            </span>
+            <a href="#specsLink" class="text-error hover:underline font-semibold uppercase tracking-wider inline-flex items-center gap-0.5">
+              <span>Link Instead</span>
+              <span class="material-symbols-outlined text-[12px]">arrow_downward</span>
+            </a>
+          </div>
+        `;
+
+        bindRemovalButtons(card);
+        fileListContainer.appendChild(card);
+        updateTelemetry();
+      }
+
+      function createActiveUploadingCard(fileName, sizeMB) {
+        const card = document.createElement('div');
+        card.className = 'file-item p-3 rounded bg-surface-container-lowest border border-primary-container shadow-sm flex flex-col gap-2 transition-all duration-300 overflow-hidden';
+        card.dataset.status = 'transfer';
+        card.dataset.size = sizeMB;
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-7 h-7 rounded bg-primary-container/10 flex items-center justify-center text-primary-container shrink-0 icon-indicator">
+                <span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-code-spec text-code-spec text-on-surface truncate font-semibold">${escapeHtml(fileName)}</span>
+                <div class="status-meta flex items-center gap-2 text-[10px] font-code-spec text-outline uppercase tracking-wider">
+                  <span class="text-primary font-bold progress-percent-text">0%</span>
+                  <span>•</span>
+                  <span class="progress-size-text">0.0 MB of ${sizeMB} MB</span>
+                  <span>•</span>
+                  <span class="text-on-surface-variant font-medium speed-text">3.2 MB/s</span>
+                </div>
+              </div>
+            </div>
+            <div class="action-slot flex items-center gap-1 shrink-0">
+              <button aria-label="Cancel upload" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center" type="button">
+                <span class="material-symbols-outlined text-[16px]">close</span>
+              </button>
+            </div>
+          </div>
+          <div class="progress-container w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+            <div class="progress-bar-fill bg-primary-container h-full rounded-full transition-all duration-200" style="width: 0%;"></div>
+          </div>
+        `;
+
+        bindRemovalButtons(card);
+        fileListContainer.appendChild(card);
+        updateTelemetry();
+
+        // Animate progress smoothly over ~2.4 seconds
+        let currentProgress = 0;
+        const totalSize = parseFloat(sizeMB) || 1.0;
+        const intervalTime = 120;
+        const increment = 100 / (2400 / intervalTime);
+
+        const progressTimer = setInterval(() => {
+          // If the element has been removed during upload
+          if (!document.body.contains(card)) {
+            clearInterval(progressTimer);
+            return;
+          }
+
+          currentProgress += increment + (Math.random() * 4 - 2);
+          if (currentProgress >= 100) {
+            currentProgress = 100;
+            clearInterval(progressTimer);
+            finalizeUploadSuccess(card, fileName, sizeMB);
+          } else {
+            const pct = Math.round(currentProgress);
+            const uploadedMB = ((currentProgress / 100) * totalSize).toFixed(1);
+            const speed = (2.2 + Math.random() * 1.6).toFixed(1);
+
+            const bar = card.querySelector('.progress-bar-fill');
+            const pctText = card.querySelector('.progress-percent-text');
+            const sizeText = card.querySelector('.progress-size-text');
+            const speedText = card.querySelector('.speed-text');
+
+            if (bar) bar.style.width = pct + '%';
+            if (pctText) pctText.innerText = pct + '%';
+            if (sizeText) sizeText.innerText = `${uploadedMB} MB of ${sizeMB} MB`;
+            if (speedText) speedText.innerText = `${speed} MB/s`;
+          }
+        }, intervalTime);
+      }
+
+      function finalizeUploadSuccess(card, fileName, sizeMB) {
+        card.dataset.status = 'completed';
+        card.className = 'file-item p-3 rounded bg-surface-container-low border border-surface-variant flex flex-col gap-1.5 transition-all duration-300 overflow-hidden';
+        
+        card.innerHTML = `
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-7 h-7 rounded bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span class="font-code-spec text-code-spec text-on-surface truncate font-semibold">${escapeHtml(fileName)}</span>
+                <div class="flex items-center gap-2 text-[10px] font-code-spec text-outline uppercase tracking-wider">
+                  <span>${sizeMB} MB</span>
+                  <span>•</span>
+                  <span class="text-secondary font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>VERIFIED &amp; ENCRYPTED
+                  </span>
+                </div>
+              </div>
+            </div>
+            <button aria-label="Remove attached file" class="remove-file-btn text-outline hover:text-error transition-colors p-1 flex items-center justify-center shrink-0" type="button">
+              <span class="material-symbols-outlined text-[16px]">close</span>
+            </button>
+          </div>
+        `;
+        bindRemovalButtons(card);
+        updateTelemetry();
+      }
+
+      function bindRemovalButtons(scope) {
+        const btns = scope.querySelectorAll('.remove-file-btn');
+        btns.forEach(btn => {
+          btn.onclick = function(e) {
+            e.stopPropagation();
+            const item = this.closest('.file-item');
+            if (item) {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(-6px)';
+              item.style.maxHeight = item.scrollHeight + 'px';
+              setTimeout(() => {
+                item.style.maxHeight = '0px';
+                item.style.paddingTop = '0px';
+                item.style.paddingBottom = '0px';
+                item.style.marginTop = '0px';
+                item.style.marginBottom = '0px';
+                item.style.borderWidth = '0px';
+              }, 50);
+              setTimeout(() => {
+                item.remove();
+                updateTelemetry();
+              }, 320);
+            }
+          };
+        });
+      }
+
+      function updateTelemetry() {
+        const items = fileListContainer.querySelectorAll('.file-item');
+        const telemetryStats = document.getElementById('telemetryStats');
+        if (!telemetryStats) return;
+
+        let totalMB = 0;
+        let completed = 0;
+        let transfer = 0;
+        let pending = 0;
+        let rejected = 0;
+
+        items.forEach(el => {
+          const sz = parseFloat(el.dataset.size) || 0;
+          totalMB += sz;
+          const st = el.dataset.status;
+          if (st === 'completed') completed++;
+          else if (st === 'transfer') transfer++;
+          else if (st === 'pending') pending++;
+          else if (st === 'rejected') rejected++;
+        });
+
+        const totalFiles = items.length;
+
+        if (totalFiles === 0) {
+          telemetryStats.innerHTML = `
+            <span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+            <span class="text-on-surface-variant font-medium">0 files attached</span>
+            <span>•</span>
+            <span class="text-outline">Ready for technical specification assets</span>
+          `;
+          return;
+        }
+
+        const formattedSize = totalMB.toFixed(1);
+        const parts = [];
+        if (completed > 0) parts.push(`${completed} completed`);
+        if (transfer > 0) parts.push(`${transfer} in transfer`);
+        if (pending > 0) parts.push(`${pending} pending`);
+        if (rejected > 0) {
+          parts.push(`<span class="text-error font-semibold inline-flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>${rejected} rejected</span>`);
+        }
+
+        telemetryStats.innerHTML = `
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-container ${transfer > 0 ? 'animate-ping' : ''}"></span>
+          <span class="text-on-surface-variant font-medium">${totalFiles} ${totalFiles === 1 ? 'file' : 'files'} (${formattedSize} MB)</span>
+          <span>•</span>
+          <span>${parts.join(', ')}</span>
+        `;
+      }
+
+      function escapeHtml(text) {
+        return String(text)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;');
+      }
+
+      // Initial telemetry calculation
+      updateTelemetry();
+    });
+  </script>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-section-padding-min pb-section-padding-min"><div class="max-w-7xl mx-auto px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop pb-section-padding-min"><div class="md:col-span-5 flex flex-col items-start gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-6 h-6 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-surface-container-lowest text-[14px]">terminal</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-wider uppercase text-inverse-on-surface leading-none">HerbCodes</span><span class="font-eyebrow-sm text-[10px] tracking-[0.25em] text-outline-variant uppercase leading-none mt-1">TECHNOLOGY</span></div></div><p class="font-body-md text-body-md text-outline-variant max-w-sm">Clean. Reliable. Engineered.</p><div class="flex items-center gap-space-md pt-space-xs"><a aria-label="LinkedIn" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">hub</span></a><a aria-label="Platform" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">code</span></a><a aria-label="Source Repository" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">deployed_code</span></a><a aria-label="Community Channel" class="text-outline-variant hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined text-[20px]">scatter_plot</span></a></div></div><div class="md:col-span-3 flex flex-col items-start"><span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.2em] text-primary-container mb-space-md uppercase">SITEMAP</span><nav class="flex flex-col space-y-space-sm" data-active-classes="text-primary-container font-semibold"><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="herbcodes-work" href="#">Work</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="herbcodes-process" href="#">Process</a><a class="font-body-sm text-body-sm text-outline-variant hover:text-inverse-on-surface transition-colors" data-path="herbcodes-about" href="#">About</a><a class="font-body-sm text-body-sm text-primary-container font-semibold hover:text-inverse-on-surface transition-colors" data-path="herbcodes-contact" href="#">Contact</a></nav></div><div class="md:col-span-4 flex flex-col items-start gap-space-sm"><span class="font-eyebrow-lg text-eyebrow-lg tracking-[0.2em] text-primary-container uppercase">CONTACT</span><a class="font-body-md text-body-md text-primary-container hover:underline" href="mailto:hello@herbcodes.com">hello@herbcodes.com</a><p class="font-body-sm text-body-sm text-outline">Ogun State, Nigeria</p><div class="pt-space-sm"><a class="inline-block bg-surface-container-lowest text-primary-container border border-primary-container font-body-sm text-body-sm font-semibold rounded-full px-6 py-2.5 hover:bg-surface-container-high hover:border-secondary-fixed-dim hover:text-secondary transition-all" data-path="herbcodes-contact" href="#">Start a project</a></div></div></div><div class="border-t border-outline/30 pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-outline"><p class="">© 2026 HerbCodes Technology. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-inverse-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-inverse-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a></div></div></div></footer>
+</body></html>

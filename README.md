@@ -8,12 +8,6 @@ Built on Next.js 15, React 19, TypeScript, Tailwind CSS, and Framer Motion.
 
 Prerequisites: Node.js 20 or later, pnpm (recommended) or npm.
 
-```bash
-pnpm install
-pnpm dev
-```
-
-Open http://localhost:3000 in your browser. The site should render with the header, hero, services grid, featured work, testimonials marquee, CTA band, and footer.
 
 ## Project structure
 
@@ -89,7 +83,7 @@ Drop these files into `public/`:
 
 `data/testimonials.ts` ships with one placeholder entry for the Bakonery Bits + Bobs co-founder. Replace the `quote`, `author`, and set `approved: true` when the real quote is confirmed. Add more testimonial entries as they come in.
 
-## What's built vs. what needs Claude Code
+## What's built 
 
 **Working out of the box:**
 - Home page (Hero, Services, Featured Work, Testimonials, CTA, Footer)
@@ -100,7 +94,7 @@ Drop these files into `public/`:
 - Full metadata setup for SEO and Open Graph
 - Reduced-motion respected via CSS media query
 
-**Next steps with Claude Code:**
+**Next steps:**
 - Case study modals with Framer Motion `layoutId` expansion
 - Scroll-driven pinning on the Process page (GSAP + ScrollTrigger)
 - Custom cursor and magnetic buttons (behind a feature flag)
