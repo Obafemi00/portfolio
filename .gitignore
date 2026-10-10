@@ -38,3 +38,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design mockup images (keep local only; HTML references are tracked)
+docs/design/**/*.png
+docs/design/**/*.jpg
+docs/design/**/*.jpeg
+docs/design/**/*.webp
+docs/design/**/*.gif
+docs/design/**/.thumbnail
