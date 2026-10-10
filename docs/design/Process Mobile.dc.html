@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#FFFFFF;color:#0A0F14;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:#05ABC4;text-decoration:none;}
+a:hover{color:#04D3BC;}
+</style>
+</helmet>
+<div style="font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:#0A0F14;background:#FFFFFF;max-width:430px;margin:0 auto;position:relative;">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #EEF1F4;">
+  <div style="height:60px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="Home Mobile.dc.html" aria-label="HerbCodes home" style="width:30px;height:30px;border-radius:50%;background:#05ABC4;display:flex;align-items:center;justify-content:center;">
+      <div style="width:12px;height:12px;border-radius:50%;border:2px solid #FFFFFF;"></div>
+    </a>
+    <button onClick="{{ toggleMenu }}" style="display:flex;align-items:center;gap:10px;height:44px;padding:0 4px 0 12px;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#0A0F14;">
+      {{ menuLabel }}
+      <span style="display:flex;flex-direction:column;gap:5px;width:20px;">
+        <span style="height:1.5px;background:#0A0F14;"></span>
+        <span style="height:1.5px;background:#05ABC4;width:14px;margin-left:6px;"></span>
+      </span>
+    </button>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;top:60px;left:0;right:0;height:calc(100vh - 60px);background:#FFFFFF;padding:40px 24px 32px;display:flex;flex-direction:column;">
+      <nav style="display:flex;flex-direction:column;">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+          <a href="{{ n.href }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #E4E8EC;font-family:'Hammersmith One',sans-serif;font-size:32px;line-height:1.1;color:{{ n.color }};">{{ n.label }}<span style="font-size:20px;color:#05ABC4;">→</span></a>
+        </sc-for>
+      </nav>
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:16px;">
+        <a href="mailto:obafemi00@gmail.com" style="display:flex;justify-content:center;align-items:center;gap:8px;height:52px;border-radius:999px;background:#05ABC4;color:#FFFFFF;font-size:15px;font-weight:500;white-space:nowrap;">Start a project <span>»</span></a>
+        <a href="mailto:obafemi00@gmail.com" style="text-align:center;font-size:14px;color:#05ABC4;">obafemi00@gmail.com</a>
+      </div>
+    </div>
+  </sc-if>
+</header>
+
+<div style="position:sticky;top:60px;z-index:45;height:2px;margin-bottom:-2px;background:{{ barTrack }};transition:background .3s;">
+  <div style="height:100%;background:#05ABC4;transform-origin:left;transform:{{ barFill }};"></div>
+</div>
+
+<section style="position:relative;padding:72px 24px 128px;display:flex;flex-direction:column;gap:20px;">
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.24em;color:#05ABC4;">OUR PROCESS</div>
+  <h1 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:40px;line-height:1.1;letter-spacing:-0.01em;color:#0A0F14;"><span style="display:block;overflow:hidden;padding-bottom:0.14em;margin-bottom:-0.14em;"><span ref="{{ h1 }}" style="display:block;">How we work.</span></span></h1>
+  <p style="margin:0;font-size:16px;line-height:1.6;color:#5A6570;text-wrap:pretty;">Precision, clarity, engineered outcomes. Six phases from discovery to ongoing management.</p>
+  <div style="position:absolute;left:50%;bottom:32px;transform:translateX(-50%);width:1px;height:52px;background:rgba(5,171,196,0.3);">
+    <div ref="{{ cueDot }}" style="position:absolute;left:-2.5px;top:0;width:6px;height:6px;border-radius:50%;background:#05ABC4;"></div>
+  </div>
+</section>
+
+<div ref="{{ phasesRef }}">
+  <sc-for list="{{ phases }}" as="p" hint-placeholder-count="6">
+    <section style="background:{{ p.bg }};padding:0 24px;">
+      <div style="height:1px;background:rgba(5,171,196,0.4);"></div>
+      <div style="padding:64px 0 72px;display:flex;flex-direction:column;gap:20px;">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:128px;line-height:0.8;color:transparent;-webkit-text-stroke:1.5px #05ABC4;letter-spacing:0.02em;">{{ p.num }}</span>
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.24em;color:#05ABC4;">PHASE {{ p.num }} / 06</span>
+        </div>
+        <h2 style="margin:12px 0 0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.12;color:#0A0F14;">{{ p.title }}</h2>
+        <p style="margin:0;font-size:16px;line-height:1.65;color:#0A0F14;text-wrap:pretty;">{{ p.p1 }}</p>
+        <p style="margin:0;font-size:16px;line-height:1.65;color:#5A6570;text-wrap:pretty;">{{ p.p2 }}</p>
+        <div style="margin-top:12px;display:flex;flex-direction:column;">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.22em;color:#5A6570;padding-bottom:10px;">DELIVERABLES</span>
+          <sc-for list="{{ p.items }}" as="it" hint-placeholder-count="4">
+            <div style="display:flex;align-items:center;gap:14px;padding:13px 0;border-top:1px solid #E4E8EC;font-size:15px;color:#0A0F14;">
+              <span style="width:6px;height:6px;border-radius:50%;background:#05ABC4;flex-shrink:0;"></span>{{ it }}
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+  </sc-for>
+</div>
+
+<section style="background:#F4F6F8;padding:72px 24px 80px;">
+  <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.24em;color:#05ABC4;">DELIVERABLES</div>
+    <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:30px;line-height:1.14;color:#0A0F14;">What you get.</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#E4E8EC;border:1px solid #E4E8EC;">
+    <sc-for list="{{ summary }}" as="s" hint-placeholder-count="6">
+      <div style="background:#FFFFFF;padding:20px 16px 24px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.2em;color:#05ABC4;">{{ s.num }}</span>
+          <span style="font-family:'Hammersmith One',sans-serif;font-size:18px;color:#0A0F14;">{{ s.title }}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex;gap:8px;font-size:13px;line-height:1.45;color:#5A6570;overflow-wrap:anywhere;">
+              <span style="width:4px;height:4px;border-radius:50%;background:#05ABC4;flex-shrink:0;margin-top:7px;"></span>{{ it }}
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="background:#0A0F14;color:#FFFFFF;padding:80px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+  <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.14;color:#FFFFFF;text-wrap:balance;">Let's build something reliable.</h2>
+  <p style="margin:0;font-size:16px;color:#A9B2BA;text-wrap:pretty;">Tell us what you need built. We scope it clearly and build it properly.</p>
+  <a href="mailto:obafemi00@gmail.com" style="margin-top:14px;align-self:stretch;display:flex;justify-content:center;align-items:center;height:52px;font-size:15px;font-weight:500;color:#FFFFFF;background:#05ABC4;border-radius:999px;white-space:nowrap;" style-active="background:#04D3BC;">Start a project</a>
+  <span style="font-size:13px;color:#7D8892;">Response within 24 hours.</span>
+</section>
+
+<footer style="background:#0A0F14;color:#FFFFFF;border-top:1px solid #1A232C;padding:64px 24px 32px;display:flex;flex-direction:column;gap:44px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:30px;height:30px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;">
+        <div style="width:14px;height:14px;border-radius:50%;background:#05ABC4;"></div>
+      </div>
+      <span style="font-family:'Hammersmith One',sans-serif;font-size:19px;letter-spacing:0.02em;">HERBCODES</span>
+    </div>
+    <span style="font-family:'Hammersmith One',sans-serif;font-size:22px;color:#FFFFFF;">Clean. Reliable. Engineered.</span>
+    <div style="display:flex;gap:10px;">
+      <a href="https://www.linkedin.com/in/femi-herbert/" target="_blank" style="display:flex;align-items:center;height:44px;font-size:13px;font-weight:500;color:#FFFFFF;border:1px solid #2A343E;border-radius:999px;padding:0 18px;white-space:nowrap;">LinkedIn ↗</a>
+      <a href="https://github.com/Obafemi00" target="_blank" style="display:flex;align-items:center;height:44px;font-size:13px;font-weight:500;color:#FFFFFF;border:1px solid #2A343E;border-radius:999px;padding:0 18px;white-space:nowrap;">GitHub ↗</a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;">
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.26em;color:#05ABC4;">SITEMAP</span>
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+        <a href="{{ n.href }}" style="font-size:15px;color:#C9D0D6;">{{ n.label }}</a>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.26em;color:#05ABC4;">CONTACT</span>
+      <a href="mailto:obafemi00@gmail.com" style="font-size:14px;color:#05ABC4;word-break:break-all;">obafemi00@gmail.com</a>
+      <a href="mailto:obafemi00@gmail.com" style="margin-top:6px;display:flex;align-items:center;height:44px;font-size:14px;font-weight:500;color:#05ABC4;background:#FFFFFF;border-radius:999px;padding:0 20px;white-space:nowrap;">Start a project</a>
+    </div>
+  </div>
+  <div>
+    <div style="height:1px;background:rgba(5,171,196,0.45);margin-bottom:20px;"></div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;color:#7D8892;">
+      <span>© 2026 HerbCodes Technology. All rights reserved.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="color:#7D8892;">Privacy</a>
+        <a href="#" style="color:#7D8892;">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { menu: false, prog: 0, inPhases: false };
+  h1 = React.createRef(); cueDot = React.createRef(); phasesRef = React.createRef();
+  componentDidMount() {
+    this.onScroll = () => {
+      const el = this.phasesRef.current; if (!el) return;
+      const r = el.getBoundingClientRect(), mid = window.innerHeight / 2;
+      const prog = Math.min(1, Math.max(0, (mid - r.top) / r.height));
+      const inPhases = r.top < mid && r.bottom > mid;
+      if (Math.abs(prog - this.state.prog) > 0.002 || inPhases !== this.state.inPhases) this.setState({ prog, inPhases });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    if (this.props.motion === false || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.h1.current && this.h1.current.animate(
+      [{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 900, delay: 150, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+    this.cueDot.current && this.cueDot.current.animate(
+      [{ transform: 'translateY(0)', opacity: 0 }, { opacity: 1, offset: 0.15 }, { opacity: 1, offset: 0.8 }, { transform: 'translateY(46px)', opacity: 0 }],
+      { duration: 2200, iterations: Infinity, easing: 'ease-in-out' });
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    const P = [
+      ['Discover', 'We start by understanding the business before touching the screen: what the site needs to do, who it serves, and what is already in place.', 'We audit the current site, talk to the people who use it, and scope the technical work so the estimate reflects reality.', ['Goals', 'Audits', 'Stakeholder interviews', 'Technical scoping'], ['Project brief', 'Site audit', 'Technical scope']],
+      ['Define', 'Findings become a plan. We map the structure of the site, decide what content it needs, and write down the technical requirements.', 'We agree on how success will be measured before design starts, so every later decision has a reference point.', ['Information architecture', 'Content strategy', 'Technical requirements', 'Success metrics'], ['Sitemap', 'Content plan', 'Requirements document', 'Success metrics']],
+      ['Design', 'Wireframes settle structure first. Visual direction follows, built on the brand and tested against real content.', 'We prototype key interactions so you can click through the experience before any production code is written.', ['Wireframes', 'Visual direction', 'Interaction design', 'Prototypes'], ['Wireframes', 'Visual design', 'Clickable prototype']],
+      ['Develop', 'We build in short cycles with regular reviews, so you see progress every week and feedback lands while it is cheap to act on.', 'Every build goes through QA, performance, and accessibility passes before it is considered done.', ['Build', 'Review cycles', 'QA', 'Performance and accessibility passes'], ['Production build', 'QA report', 'Performance and accessibility report']],
+      ['Deploy', 'Launch is planned, not improvised. We prepare DNS, SSL, redirects, and analytics ahead of the switch.', 'After launch we hand over credentials, documentation, and a walkthrough so your team knows how everything works.', ['Launch preparation', 'DNS', 'SSL', 'Analytics', 'Handover'], ['Live site', 'Analytics setup', 'Handover documentation']],
+      ['Manage', 'A site needs care after launch. We handle maintenance, security updates, and performance monitoring on an ongoing basis.', 'Content updates and small improvements run on retainer, so the site keeps pace with the business.', ['Ongoing maintenance', 'Security', 'Performance monitoring', 'Content updates'], ['Monthly maintenance', 'Uptime and security monitoring', 'Content updates']]
+    ];
+    return {
+      menuOpen: this.state.menu,
+      menuLabel: this.state.menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      nav: [['Work', 'Work Mobile.dc.html'], ['Process', 'Process Mobile.dc.html'], ['About', 'About Mobile.dc.html'], ['Contact', 'Contact Mobile.dc.html']]
+        .map(([label, href]) => ({ label, href, color: label === 'Process' ? '#05ABC4' : '#0A0F14' })),
+      phases: P.map(([title, p1, p2, items], i) => ({ num: String(i + 1).padStart(2, '0'), title, p1, p2, items, bg: i % 2 ? '#F4F6F8' : '#FFFFFF' })),
+      summary: P.map(([title, , , , items], i) => ({ num: String(i + 1).padStart(2, '0'), title, items })),
+      barTrack: this.state.inPhases ? '#E4E8EC' : 'transparent',
+      barFill: this.state.inPhases ? 'scaleX(' + this.state.prog.toFixed(4) + ')' : 'scaleX(0)',
+      h1: this.h1, cueDot: this.cueDot, phasesRef: this.phasesRef
+    };
+  }
+}
+</script>
+</body>
+</html>

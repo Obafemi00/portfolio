@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#FFFFFF;color:#0A0F14;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:#05ABC4;text-decoration:none;}
+a:hover{color:#04D3BC;}
+</style>
+</helmet>
+<div style="font-family:'Inter',system-ui,sans-serif;font-size:17px;line-height:1.6;color:#0A0F14;background:#FFFFFF;">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #EEF1F4;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px;height:76px;display:flex;align-items:center;gap:56px;">
+    <a href="Home.dc.html" style="display:flex;align-items:center;gap:12px;color:#0A0F14;">
+      <div style="width:30px;height:30px;border-radius:50%;background:#05ABC4;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <div style="width:12px;height:12px;border-radius:50%;border:2px solid #FFFFFF;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;line-height:1;">
+        <span style="font-family:'Hammersmith One',sans-serif;font-size:19px;letter-spacing:0.02em;color:#0A0F14;">HERBCODES</span>
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:10px;letter-spacing:0.42em;color:#5A6570;margin-top:3px;">TECHNOLOGY</span>
+      </div>
+    </a>
+    <nav style="display:flex;gap:32px;flex:1;">
+      <a href="Work.dc.html" style="font-size:14px;font-weight:500;color:#0A0F14;padding:6px 0;border-bottom:1.5px solid #05ABC4;transition:border-color .25s,color .25s;" style-hover="color:#0A0F14;border-bottom-color:#05ABC4;">Work</a>
+      <a href="Process.dc.html" style="font-size:14px;font-weight:500;color:#0A0F14;padding:6px 0;border-bottom:1.5px solid transparent;transition:border-color .25s,color .25s;" style-hover="color:#0A0F14;border-bottom-color:#05ABC4;">Process</a>
+      <a href="About.dc.html" style="font-size:14px;font-weight:500;color:#0A0F14;padding:6px 0;border-bottom:1.5px solid transparent;transition:border-color .25s,color .25s;" style-hover="color:#0A0F14;border-bottom-color:#05ABC4;">About</a>
+      <a href="Contact.dc.html" style="font-size:14px;font-weight:500;color:#0A0F14;padding:6px 0;border-bottom:1.5px solid transparent;transition:border-color .25s,color .25s;" style-hover="color:#0A0F14;border-bottom-color:#05ABC4;">Contact</a>
+    </nav>
+    <a href="Contact.dc.html" onMouseMove="{{ mag }}" onMouseLeave="{{ magOut }}" style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#05ABC4;background:#FFFFFF;border:1.5px solid #05ABC4;border-radius:999px;white-space:nowrap;padding:9px 20px;transition:background .25s,transform .3s cubic-bezier(.2,.8,.2,1);" style-hover="background:#F4F6F8;color:#05ABC4;">Contact <span style="font-size:15px;line-height:1;">»</span></a>
+  </div>
+</header>
+
+<section style="background:#FFFFFF;padding:128px 0 72px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end;">
+    <div style="grid-column:span 7;display:flex;flex-direction:column;gap:20px;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.28em;color:#05ABC4;">PORTFOLIO</div>
+      <h1 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:52px;line-height:1.1;letter-spacing:-0.01em;color:#0A0F14;"><span style="display:block;overflow:hidden;padding-bottom:0.14em;margin-bottom:-0.14em;"><span ref="{{ h1 }}" style="display:block;">Selected work.</span></span></h1>
+    </div>
+    <p style="grid-column:9 / span 4;margin:0;font-size:17px;line-height:1.6;color:#5A6570;text-wrap:pretty;">Nine projects across e-commerce, full-stack products, corporate sites, and ongoing management.</p>
+  </div>
+  <div style="max-width:1280px;margin:72px auto 0;padding:0 40px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid #E4E8EC;">
+      <div style="display:flex;align-items:center;">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="5">
+          <div style="display:flex;align-items:center;">
+            <button onClick="{{ f.pick }}" style="font-family:'Inter',sans-serif;font-size:15px;font-weight:500;background:none;border:none;cursor:pointer;padding:14px 22px;margin-bottom:-1px;color:{{ f.color }};border-bottom:2px solid {{ f.line }};transition:color .25s,border-color .25s;" style-hover="color:#0A0F14;">{{ f.label }}</button>
+            <span style="width:1px;height:16px;background:#E4E8EC;"></span>
+          </div>
+        </sc-for>
+      </div>
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.22em;color:#5A6570;">{{ countLabel }}</span>
+    </div>
+  </div>
+</section>
+
+<section style="background:#F4F6F8;padding:112px 0 144px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px;align-items:start;">
+    <div style="display:flex;flex-direction:column;gap:80px;">
+      <sc-for list="{{ colA }}" as="p" hint-placeholder-count="5">
+          <a href="#" onClick="{{ p.open }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;display:flex;flex-direction:column;gap:18px;padding-bottom:22px;color:#0A0F14;">
+            <div style="aspect-ratio:16 / 10;border-radius:4px;overflow:hidden;background:#E9EDF0;">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,#E9EDF0 0 12px,#E2E7EB 12px 13px);transition:transform .6s cubic-bezier(.2,.8,.2,1);transform:{{ p.scale }};">
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6570;background:rgba(244,246,248,0.9);padding:4px 10px;">cover image: {{ p.name }}</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;">
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <span style="font-family:'Hammersmith One',sans-serif;font-size:22px;line-height:1.15;color:#0A0F14;">{{ p.name }}</span>
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.22em;color:#5A6570;">{{ p.cat }}</span>
+              </div>
+              <span style="font-size:18px;color:#05ABC4;transition:transform .3s cubic-bezier(.2,.8,.2,1);transform:{{ p.arrow }};">→</span>
+            </div>
+            <div style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#05ABC4;box-shadow:0 2px 12px rgba(5,171,196,0.55);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .3s;transform:{{ p.line }};opacity:{{ p.lineOp }};"></div>
+          </a>
+        </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:80px;padding-top:80px;">
+      <sc-for list="{{ colB }}" as="p" hint-placeholder-count="4">
+          <a href="#" onClick="{{ p.open }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;display:flex;flex-direction:column;gap:18px;padding-bottom:22px;color:#0A0F14;">
+            <div style="aspect-ratio:16 / 10;border-radius:4px;overflow:hidden;background:#E9EDF0;">
+              <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,#E9EDF0 0 12px,#E2E7EB 12px 13px);transition:transform .6s cubic-bezier(.2,.8,.2,1);transform:{{ p.scale }};">
+                <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6570;background:rgba(244,246,248,0.9);padding:4px 10px;">cover image: {{ p.name }}</span>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:16px;">
+              <div style="display:flex;flex-direction:column;gap:6px;">
+                <span style="font-family:'Hammersmith One',sans-serif;font-size:22px;line-height:1.15;color:#0A0F14;">{{ p.name }}</span>
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.22em;color:#5A6570;">{{ p.cat }}</span>
+              </div>
+              <span style="font-size:18px;color:#05ABC4;transition:transform .3s cubic-bezier(.2,.8,.2,1);transform:{{ p.arrow }};">→</span>
+            </div>
+            <div style="position:absolute;left:0;right:0;bottom:0;height:2px;background:#05ABC4;box-shadow:0 2px 12px rgba(5,171,196,0.55);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .3s;transform:{{ p.line }};opacity:{{ p.lineOp }};"></div>
+          </a>
+        </sc-for>
+    </div>
+  </div>
+</section>
+
+
+<sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:100;background:rgba(10,15,20,0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;">
+    <div ref="{{ modalRef }}" onClick="{{ stop }}" role="dialog" aria-modal="true" aria-label="{{ m.name }} case study" style="position:relative;width:90vw;height:90vh;max-width:1400px;background:#FFFFFF;border-radius:8px;box-shadow:0 30px 80px rgba(10,15,20,0.35);overflow-y:auto;overscroll-behavior:contain;">
+      <div style="position:sticky;top:0;z-index:2;height:0;display:flex;justify-content:flex-end;">
+        <button onClick="{{ close }}" aria-label="Close" style="margin:20px 20px 0 0;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);color:#5A6570;font-family:'Inter',sans-serif;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:color .25s;" style-hover="color:#05ABC4;">✕</button>
+      </div>
+      <div style="height:60vh;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,#E9EDF0 0 12px,#E2E7EB 12px 13px);">
+        <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6570;background:rgba(244,246,248,0.9);padding:4px 10px;">cover image: {{ m.name }}</span>
+      </div>
+      <div style="max-width:1080px;margin:0 auto;padding:64px 64px 56px;">
+        <h1 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:48px;line-height:1.1;color:#0A0F14;">{{ m.name }}</h1>
+        <div style="display:flex;align-items:center;gap:14px;margin-top:18px;flex-wrap:wrap;">
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;line-height:1;color:#05ABC4;background:#F4F6F8;border-radius:999px;padding:8px 14px 6px;">{{ m.cat }}</span>
+          <span style="font-size:14px;color:#5A6570;">{{ m.year }}</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:48px;border-top:1px solid #E4E8EC;border-bottom:1px solid #E4E8EC;">
+          <div style="display:flex;flex-direction:column;padding:8px 32px 8px 0;border-right:1px solid #E4E8EC;">
+            <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;">
+              <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;color:#5A6570;">CLIENT</span>
+              <span style="font-size:16px;font-weight:500;color:#0A0F14;">{{ m.client }}</span>
+            </div>
+            <sc-if value="{{ m.roleShow }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid #EEF1F4;">
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;color:#5A6570;">ROLE</span>
+                <span style="font-size:16px;font-weight:500;color:#0A0F14;">{{ m.role }}</span>
+              </div>
+            </sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;padding:8px 0 8px 32px;">
+            <sc-if value="{{ m.stackShow }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;">
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;color:#5A6570;">STACK</span>
+                <span style="font-size:16px;font-weight:500;color:#0A0F14;">{{ m.stack }}</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{ m.urlShow }}" hint-placeholder-val="{{ true }}">
+              <div style="display:flex;flex-direction:column;gap:4px;padding:16px 0;border-top:1px solid #EEF1F4;">
+                <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.2em;color:#5A6570;">LIVE URL</span>
+                <a href="{{ m.href }}" target="_blank" style="font-size:16px;font-weight:500;color:#05ABC4;">{{ m.url }} ↗</a>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+        <div style="margin-top:32px;">
+          <sc-if value="{{ m.overviewShow }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;padding:48px 0;border-top:1px solid #E4E8EC;">
+              <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.15;color:#0A0F14;">Overview</h2>
+              <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+                <p style="margin:0;font-size:18px;line-height:1.65;color:#0A0F14;text-wrap:pretty;">{{ m.overview }}</p>
+                <sc-if value="{{ m.overviewPending }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6570;border:1px dashed #C9D0D6;border-radius:4px;padding:6px 10px;">placeholder: write-up pending</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ m.problemShow }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;padding:48px 0;border-top:1px solid #E4E8EC;">
+              <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.15;color:#0A0F14;">The problem</h2>
+              <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+                <p style="margin:0;font-size:18px;line-height:1.65;color:#0A0F14;text-wrap:pretty;">{{ m.problem }}</p>
+                <sc-if value="{{ m.problemPending }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6570;border:1px dashed #C9D0D6;border-radius:4px;padding:6px 10px;">placeholder: write-up pending</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ m.approachShow }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;padding:48px 0;border-top:1px solid #E4E8EC;">
+              <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.15;color:#0A0F14;">Approach</h2>
+              <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+                <p style="margin:0;font-size:18px;line-height:1.65;color:#0A0F14;text-wrap:pretty;">{{ m.approach }}</p>
+                <sc-if value="{{ m.approachPending }}" hint-placeholder-val="{{ false }}">
+                  <span style="font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#5A6570;border:1px dashed #C9D0D6;border-radius:4px;padding:6px 10px;">placeholder: write-up pending</span>
+                </sc-if>
+              </div>
+            </div>
+          </sc-if>
+          <sc-if value="{{ m.statsShow }}" hint-placeholder-val="{{ true }}">
+            <div style="padding:48px 0;border-top:1px solid #E4E8EC;display:flex;flex-direction:column;gap:36px;">
+              <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.15;color:#0A0F14;">Outcome</h2>
+              <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;">
+                <sc-for list="{{ m.stats }}" as="s" hint-placeholder-count="3">
+                  <div style="display:flex;flex-direction:column;gap:8px;padding-top:20px;border-top:2px solid #05ABC4;">
+                    <span style="font-family:'Hammersmith One',sans-serif;font-size:56px;line-height:1;color:#05ABC4;">{{ s.v }}</span>
+                    <span style="font-size:14px;color:#5A6570;">{{ s.l }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px;">
+          <sc-for list="{{ gallery }}" as="g" hint-placeholder-count="4">
+            <div style="aspect-ratio:16 / 10;border-radius:4px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,#E9EDF0 0 12px,#E2E7EB 12px 13px);">
+              <span style="font-family:ui-monospace,Menlo,monospace;font-size:11px;color:#5A6570;background:rgba(244,246,248,0.9);padding:4px 10px;">screenshot {{ g }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:56px;padding-top:32px;border-top:1px solid #E4E8EC;">
+          <button onClick="{{ close }}" style="font-family:'Inter',sans-serif;height:44px;padding:0 24px;font-size:14px;font-weight:500;color:#05ABC4;background:#FFFFFF;border:1.5px solid #05ABC4;border-radius:999px;cursor:pointer;white-space:nowrap;transition:background .25s;" style-hover="background:#F4F6F8;">Close</button>
+          <button onClick="{{ next }}" onMouseEnter="{{ nextEnter }}" onMouseLeave="{{ nextLeave }}" style="font-family:'Inter',sans-serif;height:44px;display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:#05ABC4;background:none;border:none;cursor:pointer;padding:0;white-space:nowrap;">Next project <span style="transition:transform .3s cubic-bezier(.2,.8,.2,1);transform:{{ nextArrow }};">→</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<section style="background:#0A0F14;color:#FFFFFF;padding:128px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 40px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;">
+    <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:44px;line-height:1.12;color:#FFFFFF;">Let's build something reliable.</h2>
+    <p style="margin:0;font-size:18px;color:#A9B2BA;">Tell us what you need built. We scope it clearly and build it properly.</p>
+    <a href="mailto:obafemi00@gmail.com" onMouseMove="{{ mag }}" onMouseLeave="{{ magOut }}" style="margin-top:16px;font-size:15px;font-weight:500;color:#FFFFFF;background:#05ABC4;border-radius:999px;white-space:nowrap;padding:14px 30px;transition:background .25s,transform .3s cubic-bezier(.2,.8,.2,1);" style-hover="background:#04D3BC;color:#FFFFFF;">Start a project</a>
+    <span style="font-size:13px;color:#7D8892;margin-top:4px;">Response within 24 hours.</span>
+  </div>
+</section>
+
+<footer style="background:#0A0F14;color:#FFFFFF;border-top:1px solid #1A232C;">
+  <div style="max-width:1280px;margin:0 auto;padding:88px 40px 0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;">
+    <div style="grid-column:span 5;display:flex;flex-direction:column;gap:22px;">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div style="width:30px;height:30px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;">
+          <div style="width:14px;height:14px;border-radius:50%;background:#05ABC4;"></div>
+        </div>
+        <span style="font-family:'Hammersmith One',sans-serif;font-size:19px;letter-spacing:0.02em;">HERBCODES</span>
+      </div>
+      <span style="font-family:'Hammersmith One',sans-serif;font-size:22px;color:#FFFFFF;">Clean. Reliable. Engineered.</span>
+      <div style="display:flex;gap:10px;">
+        <a href="https://www.linkedin.com/in/femi-herbert/" target="_blank" style="font-size:13px;font-weight:500;color:#FFFFFF;border:1px solid #2A343E;border-radius:999px;white-space:nowrap;padding:7px 16px;transition:border-color .25s,color .25s;" style-hover="color:#05ABC4;border-color:#05ABC4;">LinkedIn ↗</a>
+        <a href="https://github.com/Obafemi00" target="_blank" style="font-size:13px;font-weight:500;color:#FFFFFF;border:1px solid #2A343E;border-radius:999px;white-space:nowrap;padding:7px 16px;transition:border-color .25s,color .25s;" style-hover="color:#05ABC4;border-color:#05ABC4;">GitHub ↗</a>
+      </div>
+    </div>
+    <div style="grid-column:7 / span 2;display:flex;flex-direction:column;gap:14px;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.28em;color:#05ABC4;margin-bottom:4px;">SITEMAP</span>
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+        <a href="{{ n.href }}" style="font-size:15px;color:#C9D0D6;transition:color .25s;" style-hover="color:#FFFFFF;">{{ n.label }}</a>
+      </sc-for>
+    </div>
+    <div style="grid-column:10 / span 3;display:flex;flex-direction:column;gap:14px;align-items:flex-start;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.28em;color:#05ABC4;margin-bottom:4px;">CONTACT</span>
+      <a href="mailto:obafemi00@gmail.com" style="font-size:15px;color:#05ABC4;">obafemi00@gmail.com</a>
+      <a href="mailto:obafemi00@gmail.com" onMouseMove="{{ mag }}" onMouseLeave="{{ magOut }}" style="margin-top:10px;font-size:14px;font-weight:500;color:#05ABC4;background:#FFFFFF;border-radius:999px;white-space:nowrap;padding:11px 22px;transition:background .25s,transform .3s cubic-bezier(.2,.8,.2,1);" style-hover="background:#F4F6F8;color:#05ABC4;">Start a project</a>
+    </div>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:72px 40px 36px;">
+    <div style="height:1px;background:rgba(5,171,196,0.45);margin-bottom:24px;"></div>
+    <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#7D8892;">
+      <span>© 2026 HerbCodes Technology. All rights reserved.</span>
+      <div style="display:flex;gap:24px;">
+        <a href="#" style="color:#7D8892;" style-hover="color:#FFFFFF;">Privacy</a>
+        <a href="#" style="color:#7D8892;" style-hover="color:#FFFFFF;">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { f: 'All', hw: '', open: null, nh: false };
+  h1 = React.createRef();
+  componentDidMount() {
+    this.onKey = (e) => { if (e.key === 'Escape' && this.state.open !== null) this.setState({ open: null }); };
+    window.addEventListener('keydown', this.onKey);
+    if (this.props.motion === false || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.h1.current && this.h1.current.animate(
+      [{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 900, delay: 150, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+  }
+  modalRef = React.createRef();
+  componentDidUpdate(_, prev) {
+    if (prev.open !== this.state.open) {
+      document.body.style.overflow = this.state.open === null ? '' : 'hidden';
+      if (this.state.open !== null && this.modalRef.current) this.modalRef.current.scrollTop = 0;
+    }
+  }
+  componentWillUnmount() { document.body.style.overflow = ''; window.removeEventListener('keydown', this.onKey); }
+  modalVals(P) {
+    const o = this.state.open, p = o === null ? P[0] : P[o];
+    return {
+      modalOpen: o !== null,
+      modalRef: this.modalRef,
+      m: {
+        name: p.name, cat: p.cat, year: p.year, client: p.client,
+        role: p.role, roleShow: !!p.role, stack: p.stack, stackShow: !!p.stack,
+        url: p.url, href: 'https://' + p.url, urlShow: !!p.url,
+        overview: p.overview, overviewShow: true, overviewPending: false,
+        problem: p.problem, problemShow: !!p.problem || o !== 0, problemPending: !p.problem,
+        approach: p.approach, approachShow: true, approachPending: !p.approach,
+        stats: p.stats.map(([v, l]) => ({ v, l })), statsShow: p.stats.length > 0
+      },
+      gallery: ['01', '02', '03', '04'],
+      close: () => this.setState({ open: null }),
+      stop: (e) => e.stopPropagation(),
+      next: () => { this.setState({ open: (o + 1) % P.length }); if (this.modalRef.current) this.modalRef.current.scrollTop = 0; },
+      nextArrow: this.state.nh ? 'translateX(4px)' : 'none',
+      nextEnter: () => this.setState({ nh: true }), nextLeave: () => this.setState({ nh: false })
+    };
+  }
+  renderVals() {
+    const P = [
+      { name: 'Realxworld', cat: 'FULL-STACK WEB APP', year: '2025', tags: ['Full-stack'], client: 'Realxworld', role: 'Full-stack design and development, Phase 1 and Phase 2', stack: 'Next.js, PostgreSQL, Prisma, Redis, Cloudinary, Cloudflare', url: 'realxworld.net',
+        overview: 'A multi-phase full-stack product build.',
+        problem: 'The project needed a performant, scalable foundation covering data access, caching, media handling, and edge delivery across two development phases.',
+        approach: 'Architected on Next.js with PostgreSQL and Prisma for the data layer, Redis for caching, Cloudinary for media, and Cloudflare at the edge. Delivered across Phase 1 and Phase 2 engagements.',
+        stats: [['2', 'Development phases'], ['₦1.5M', 'Project value'], ['100%', 'Delivered on time']] },
+      { name: 'Ituen Basi', cat: 'FASHION E-COMMERCE', year: '2025', tags: ['E-commerce', 'Redesign'], client: 'Ituen Basi', role: 'Complete rebuild', stack: '', url: '',
+        overview: 'Complete rebuild of a Nigerian luxury fashion label.', problem: '',
+        approach: 'Minimal luxury direction across 21 products, with Nigeria and international shipping through DHL and Calendly consultations.',
+        stats: [['21', 'Products']] },
+      { name: 'Studio SDK CGI', cat: 'CREATIVE AGENCY WEBSITE', year: '2025', tags: ['Web'], client: 'Studio SDK CGI', role: '', stack: 'Next.js, GSAP', url: '',
+        overview: 'Monochrome editorial site for a creative agency.', problem: '',
+        approach: 'Built on Next.js and GSAP with Didot typography, bottom pill navigation, and custom motion.', stats: [] },
+      { name: 'LeapCrest', cat: 'CORPORATE WEBSITE', year: '2025', tags: ['Web'], client: 'LeapCrest (international client)', role: '', stack: 'Next.js', url: '',
+        overview: 'Corporate website for an international client.', problem: '', approach: '',
+        stats: [['$50K', 'Project value']] },
+      { name: 'Creator Playbook', cat: 'DIGITAL PRODUCT', year: '2025', tags: ['Full-stack'], client: 'Creator Playbook', role: '', stack: 'Next.js, Supabase, Stripe', url: '',
+        overview: 'Digital product build with payments.', problem: '', approach: '',
+        stats: [['₦300K', 'Project value'], ['3 mo', 'Maintenance included']] },
+      { name: 'Founder Groundworks', cat: 'BUSINESS WEBSITE', year: '2025', tags: ['Web', 'Full-stack'], client: 'Founder Groundworks', role: '', stack: 'Next.js, Supabase, Google Workspace', url: '',
+        overview: 'Business website connected to Supabase and Google Workspace.', problem: '', approach: '',
+        stats: [['₦350K', 'Project value'], ['3 mo', 'Maintenance included']] },
+      { name: 'Bakonery Bits + Bobs', cat: 'E-COMMERCE', year: '2025', tags: ['E-commerce'], client: 'Bakonery Bits + Bobs', role: '', stack: 'Shopify (Dawn theme), Sellbrite', url: '',
+        overview: 'Shopify storefront with Etsy sync.', problem: '',
+        approach: 'Customized the Dawn theme and integrated Sellbrite to keep Etsy listings in sync with the store.', stats: [] },
+      { name: 'Katy Express Track', cat: 'LOGISTICS WEBSITE', year: '2025', tags: ['Web', 'Redesign'], client: 'Katy Express Track', role: 'Revamp and ongoing maintenance', stack: 'Wix', url: '',
+        overview: 'Revamp of a logistics website, followed by monthly maintenance.', problem: '', approach: '',
+        stats: [['₦200K', 'Revamp'], ['₦50K', 'Monthly maintenance']] },
+      { name: '1010 Coding', cat: 'WEBSITE MANAGEMENT AND EDUCATION', year: 'Ongoing', tags: ['Web'], client: '1010 Coding', role: 'Web manager and coding instructor', stack: 'WordPress, LearnPress, Elementor', url: '',
+        overview: 'Ongoing website management alongside a coding instructor role.', problem: '', approach: '', stats: [] }
+    ];
+    const f = this.state.f;
+    const list = P.map((p, i) => ({ p, i })).filter(({ p }) => f === 'All' || p.tags.includes(f)).map(({ p, i }) => {
+      const on = this.state.hw === p.name;
+      return {
+        name: p.name, cat: p.cat + ' · ' + p.year.toUpperCase(),
+        scale: on ? 'scale(1.03)' : 'none',
+        arrow: on ? 'translateX(4px)' : 'none',
+        line: on ? 'scaleX(1)' : 'scaleX(0)', lineOp: on ? 1 : 0,
+        enter: () => this.setState({ hw: p.name }), leave: () => this.setState({ hw: '' }),
+        open: (e) => { e.preventDefault(); this.setState({ open: i, hw: '' }); }
+      };
+    });
+    const reduced = this.props.motion === false;
+    return {
+      ...this.modalVals(P),
+      h1: this.h1,
+      filters: ['All', 'Web', 'E-commerce', 'Redesign', 'Full-stack'].map(label => ({
+        label, color: label === f ? '#0A0F14' : '#5A6570', line: label === f ? '#05ABC4' : 'transparent',
+        pick: () => this.setState({ f: label })
+      })),
+      countLabel: String(list.length).padStart(2, '0') + (list.length === 1 ? ' PROJECT' : ' PROJECTS'),
+      colA: list.filter((_, i) => i % 2 === 0),
+      colB: list.filter((_, i) => i % 2 === 1),
+      nav: [{ label: 'Work', href: 'Work.dc.html' }, { label: 'Process', href: 'Process.dc.html' }, { label: 'About', href: 'About.dc.html' }, { label: 'Contact', href: 'Contact.dc.html' }],
+      mag: (e) => {
+        if (reduced || window.innerWidth < 900) return;
+        const el = e.currentTarget, r = el.getBoundingClientRect();
+        el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.18}px,${(e.clientY - r.top - r.height / 2) * 0.3}px)`;
+      },
+      magOut: (e) => { e.currentTarget.style.transform = ''; }
+    };
+  }
+}
+</script>
+</body>
+</html>

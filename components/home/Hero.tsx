@@ -77,7 +77,7 @@ export default function Hero() {
           >
             <Magnetic className="w-full md:w-auto">
               <Button
-                href="/work"
+                href="#selected-work"
                 variant="primary"
                 size="lg"
                 className="w-full md:w-auto h-[52px] md:h-auto px-[26px] py-[13px] text-[15px] shadow-none hover:shadow-none"

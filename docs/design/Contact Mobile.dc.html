@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#FFFFFF;color:#0A0F14;-webkit-font-smoothing:antialiased;}
+*{box-sizing:border-box;}
+a{color:#05ABC4;text-decoration:none;}
+a:hover{color:#04D3BC;}
+</style>
+</helmet>
+<div style="font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:#0A0F14;background:#FFFFFF;max-width:430px;margin:0 auto;position:relative;">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid #EEF1F4;">
+  <div style="height:60px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;">
+    <a href="Home Mobile.dc.html" aria-label="HerbCodes home" style="width:30px;height:30px;border-radius:50%;background:#05ABC4;display:flex;align-items:center;justify-content:center;">
+      <div style="width:12px;height:12px;border-radius:50%;border:2px solid #FFFFFF;"></div>
+    </a>
+    <button onClick="{{ toggleMenu }}" style="display:flex;align-items:center;gap:10px;height:44px;padding:0 4px 0 12px;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:14px;font-weight:500;color:#0A0F14;">
+      {{ menuLabel }}
+      <span style="display:flex;flex-direction:column;gap:5px;width:20px;">
+        <span style="height:1.5px;background:#0A0F14;"></span>
+        <span style="height:1.5px;background:#05ABC4;width:14px;margin-left:6px;"></span>
+      </span>
+    </button>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;top:60px;left:0;right:0;height:calc(100vh - 60px);background:#FFFFFF;padding:40px 24px 32px;display:flex;flex-direction:column;">
+      <nav style="display:flex;flex-direction:column;">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+          <a href="{{ n.href }}" style="display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid #E4E8EC;font-family:'Hammersmith One',sans-serif;font-size:32px;line-height:1.1;color:{{ n.color }};">{{ n.label }}<span style="font-size:20px;color:#05ABC4;">→</span></a>
+        </sc-for>
+      </nav>
+      <div style="margin-top:auto;display:flex;flex-direction:column;gap:16px;">
+        <a href="mailto:obafemi00@gmail.com" style="display:flex;justify-content:center;align-items:center;gap:8px;height:52px;border-radius:999px;background:#05ABC4;color:#FFFFFF;font-size:15px;font-weight:500;white-space:nowrap;">Start a project <span>»</span></a>
+        <a href="mailto:obafemi00@gmail.com" style="text-align:center;font-size:14px;color:#05ABC4;">obafemi00@gmail.com</a>
+      </div>
+    </div>
+  </sc-if>
+</header>
+
+<section style="padding:72px 24px 56px;display:flex;flex-direction:column;gap:20px;">
+  <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.24em;color:#05ABC4;">GET IN TOUCH</div>
+  <h1 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:44px;line-height:1.1;letter-spacing:-0.01em;color:#0A0F14;"><span style="display:block;overflow:hidden;padding-bottom:0.14em;margin-bottom:-0.14em;"><span ref="{{ h1 }}" style="display:block;">Let's talk.</span></span></h1>
+  <p style="margin:0;font-size:16px;line-height:1.6;color:#5A6570;text-wrap:pretty;">Tell us what you need built. We respond within 24 hours.</p>
+</section>
+
+<section style="padding:0 24px 80px;display:flex;flex-direction:column;gap:56px;">
+  <div style="display:flex;flex-direction:column;gap:36px;">
+      <label style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.24em;color:#05ABC4;">YOUR NAME</span>
+        <input type="text" value="{{ name }}" onChange="{{ setName }}" placeholder="Full name" style="font-family:'Inter',sans-serif;font-size:17px;color:#0A0F14;background:transparent;border:none;border-bottom:1px solid #C9D0D6;border-radius:0;padding:10px 0 12px;outline:none;transition:border-color .25s;" style-focus="border-bottom-color:#05ABC4;"></input>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.24em;color:#05ABC4;">YOUR EMAIL</span>
+        <input type="email" value="{{ email }}" onChange="{{ setEmail }}" placeholder="you@company.com" style="font-family:'Inter',sans-serif;font-size:17px;color:#0A0F14;background:transparent;border:none;border-bottom:1px solid #C9D0D6;border-radius:0;padding:10px 0 12px;outline:none;transition:border-color .25s;" style-focus="border-bottom-color:#05ABC4;"></input>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:10px;">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.24em;color:#05ABC4;">WHAT CAN WE BUILD FOR YOU</span>
+        <textarea rows="4" value="{{ msg }}" onChange="{{ setMsg }}" placeholder="A short description of the project, timeline, and budget range." style="font-family:'Inter',sans-serif;font-size:17px;line-height:1.55;color:#0A0F14;background:transparent;border:none;border-bottom:1px solid #C9D0D6;border-radius:0;padding:10px 0 12px;outline:none;resize:vertical;transition:border-color .25s;" style-focus="border-bottom-color:#05ABC4;"></textarea>
+      </label>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <button onClick="{{ send }}" style="font-family:'Inter',sans-serif;height:52px;font-size:15px;font-weight:500;color:#FFFFFF;background:#05ABC4;border:none;border-radius:999px;cursor:pointer;white-space:nowrap;" style-active="background:#04D3BC;">Send message</button>
+      <span style="font-size:13px;color:#5A6570;text-align:center;">Opens your mail client with these details filled in.</span>
+    </div>
+  </div>
+  <aside style="background:#F4F6F8;border-radius:4px;padding:32px 24px;display:flex;flex-direction:column;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.26em;color:#5A6570;">DIRECT</div>
+      <a href="mailto:obafemi00@gmail.com" style="font-size:16px;font-weight:500;color:#05ABC4;margin-top:10px;">obafemi00@<wbr>gmail.com</a>
+      <span style="font-size:14px;color:#5A6570;margin-top:6px;">Response within 24 hours.</span>
+      <div style="height:1px;background:rgba(5,171,196,0.45);margin:24px 0;"></div>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.26em;color:#5A6570;">SOCIAL</div>
+      <div style="display:flex;flex-direction:column;gap:4px;margin-top:8px;">
+        <a href="https://www.linkedin.com/in/femi-herbert/" target="_blank" style="display:flex;align-items:center;height:40px;font-size:16px;color:#0A0F14;transition:color .25s;" style-hover="color:#05ABC4;">LinkedIn <span style="color:#05ABC4;margin-left:6px;">↗</span></a>
+        <a href="https://github.com/Obafemi00" target="_blank" style="display:flex;align-items:center;height:40px;font-size:16px;color:#0A0F14;transition:color .25s;" style-hover="color:#05ABC4;">GitHub <span style="color:#05ABC4;margin-left:6px;">↗</span></a>
+      </div>
+  </aside>
+</section>
+
+<section style="background:#0A0F14;color:#FFFFFF;padding:80px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+  <h2 style="margin:0;font-family:'Hammersmith One',sans-serif;font-weight:400;font-size:32px;line-height:1.14;color:#FFFFFF;text-wrap:balance;">Let's build something reliable.</h2>
+  <p style="margin:0;font-size:16px;color:#A9B2BA;text-wrap:pretty;">Tell us what you need built. We scope it clearly and build it properly.</p>
+  <a href="mailto:obafemi00@gmail.com" style="margin-top:14px;align-self:stretch;display:flex;justify-content:center;align-items:center;height:52px;font-size:15px;font-weight:500;color:#FFFFFF;background:#05ABC4;border-radius:999px;white-space:nowrap;" style-active="background:#04D3BC;">Start a project</a>
+  <span style="font-size:13px;color:#7D8892;">Response within 24 hours.</span>
+</section>
+
+<footer style="background:#0A0F14;color:#FFFFFF;border-top:1px solid #1A232C;padding:64px 24px 32px;display:flex;flex-direction:column;gap:44px;">
+  <div style="display:flex;flex-direction:column;gap:18px;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div style="width:30px;height:30px;border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;">
+        <div style="width:14px;height:14px;border-radius:50%;background:#05ABC4;"></div>
+      </div>
+      <span style="font-family:'Hammersmith One',sans-serif;font-size:19px;letter-spacing:0.02em;">HERBCODES</span>
+    </div>
+    <span style="font-family:'Hammersmith One',sans-serif;font-size:22px;color:#FFFFFF;">Clean. Reliable. Engineered.</span>
+    <div style="display:flex;gap:10px;">
+      <a href="https://www.linkedin.com/in/femi-herbert/" target="_blank" style="display:flex;align-items:center;height:44px;font-size:13px;font-weight:500;color:#FFFFFF;border:1px solid #2A343E;border-radius:999px;padding:0 18px;white-space:nowrap;">LinkedIn ↗</a>
+      <a href="https://github.com/Obafemi00" target="_blank" style="display:flex;align-items:center;height:44px;font-size:13px;font-weight:500;color:#FFFFFF;border:1px solid #2A343E;border-radius:999px;padding:0 18px;white-space:nowrap;">GitHub ↗</a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;">
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.26em;color:#05ABC4;">SITEMAP</span>
+      <sc-for list="{{ nav }}" as="n" hint-placeholder-count="4">
+        <a href="{{ n.href }}" style="font-size:15px;color:#C9D0D6;">{{ n.label }}</a>
+      </sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:0.26em;color:#05ABC4;">CONTACT</span>
+      <a href="mailto:obafemi00@gmail.com" style="font-size:14px;color:#05ABC4;word-break:break-all;">obafemi00@gmail.com</a>
+      <a href="mailto:obafemi00@gmail.com" style="margin-top:6px;display:flex;align-items:center;height:44px;font-size:14px;font-weight:500;color:#05ABC4;background:#FFFFFF;border-radius:999px;padding:0 20px;white-space:nowrap;">Start a project</a>
+    </div>
+  </div>
+  <div>
+    <div style="height:1px;background:rgba(5,171,196,0.45);margin-bottom:20px;"></div>
+    <div style="display:flex;flex-direction:column;gap:12px;font-size:12px;color:#7D8892;">
+      <span>© 2026 HerbCodes Technology. All rights reserved.</span>
+      <div style="display:flex;gap:20px;">
+        <a href="#" style="color:#7D8892;">Privacy</a>
+        <a href="#" style="color:#7D8892;">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:844},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { menu: false, name: '', email: '', msg: '' };
+  h1 = React.createRef();
+  componentDidMount() {
+    if (this.props.motion === false || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.h1.current && this.h1.current.animate(
+      [{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'none' }],
+      { duration: 900, delay: 150, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' });
+  }
+  send = () => {
+    const { name, email, msg } = this.state;
+    const subject = 'New project enquiry' + (name ? ' from ' + name : '');
+    const body = [msg, '', name && 'Name: ' + name, email && 'Email: ' + email].filter(x => x !== false && x !== undefined).join('\n');
+    window.location.href = 'mailto:obafemi00@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.trim());
+  };
+  formVals() {
+    return {
+      name: this.state.name, email: this.state.email, msg: this.state.msg,
+      setName: (e) => this.setState({ name: e.target.value }),
+      setEmail: (e) => this.setState({ email: e.target.value }),
+      setMsg: (e) => this.setState({ msg: e.target.value }),
+      send: this.send
+    };
+  }
+  renderVals() {
+    return {
+      ...this.formVals(),
+      menuOpen: this.state.menu,
+      menuLabel: this.state.menu ? 'Close' : 'Menu',
+      toggleMenu: () => this.setState(s => ({ menu: !s.menu })),
+      nav: [['Work', 'Work Mobile.dc.html'], ['Process', 'Process Mobile.dc.html'], ['About', 'About Mobile.dc.html'], ['Contact', 'Contact Mobile.dc.html']]
+        .map(([label, href]) => ({ label, href, color: label === 'Contact' ? '#05ABC4' : '#0A0F14' })),
+      h1: this.h1
+    };
+  }
+}
+</script>
+</body>
+</html>
