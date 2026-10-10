@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
@@ -40,12 +41,14 @@ export default function Header() {
       >
         <div className="container-content h-[60px] md:h-[76px] flex items-center justify-between gap-14">
           <Link href="/" className="flex items-center gap-3 group" aria-label="HerbCodes home">
-            <span
-              className="w-[30px] h-[30px] rounded-full bg-herb-cyan flex items-center justify-center flex-shrink-0"
-              aria-hidden="true"
-            >
-              <span className="w-3 h-3 rounded-full border-2 border-white" />
-            </span>
+            <Image
+              src="/logo-icon.png"
+              alt="HerbCodes bug icon"
+              width={30}
+              height={30}
+              priority
+              className="w-[30px] h-[30px] flex-shrink-0"
+            />
             <span className="hidden md:flex flex-col leading-none">
               <span className="font-hammersmith text-[19px] tracking-[0.02em] text-herb-ink">
                 HERBCODES

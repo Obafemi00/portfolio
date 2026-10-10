@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from '@/components/ui/Button';
 import Magnetic from '@/components/ui/Magnetic';
@@ -22,12 +23,13 @@ export default function Footer() {
       <div className="container-content pt-16 md:pt-[88px] grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-6">
         <div className="md:col-span-5 flex flex-col gap-[22px]">
           <div className="flex items-center gap-3">
-            <span
-              className="w-[30px] h-[30px] rounded-full bg-white flex items-center justify-center flex-shrink-0"
-              aria-hidden="true"
-            >
-              <span className="w-3.5 h-3.5 rounded-full bg-herb-cyan" />
-            </span>
+            <Image
+              src="/logo-icon.png"
+              alt="HerbCodes bug icon"
+              width={30}
+              height={30}
+              className="w-[30px] h-[30px] flex-shrink-0"
+            />
             <span className="font-hammersmith text-[19px] tracking-[0.02em]">HERBCODES</span>
           </div>
           <p className="m-0 font-hammersmith text-[22px] text-white">
