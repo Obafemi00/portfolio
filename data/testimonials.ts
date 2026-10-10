@@ -5,6 +5,7 @@ export type Testimonial = {
   role: string;
   company: string;
   photo?: string;
+  badge?: string;
   approved: boolean;
 };
 
@@ -12,10 +13,11 @@ export const testimonials: Testimonial[] = [
   {
     slug: 'bakonery',
     quote:
-      'PLACEHOLDER: real quote pending from the Bakonery Bits + Bobs co-founder. Swap this text once approved.',
+      'HerbCodes rebuilt our storefront and connected our Etsy listings without missing an order. The site has run cleanly since launch. (Real quote pending.)',
     author: 'PLACEHOLDER',
     role: 'Co-founder',
     company: 'Bakonery Bits + Bobs',
+    badge: 'PLACEHOLDER QUOTE',
     approved: false,
   },
 ];

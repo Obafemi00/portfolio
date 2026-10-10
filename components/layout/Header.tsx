@@ -12,6 +12,11 @@ const navItems = [
   { label: 'About', href: '/about' },
 ];
 
+const mobileNavItems = [
+  ...navItems,
+  { label: 'Contact', href: 'mailto:obafemi00@gmail.com' },
+];
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -27,99 +32,101 @@ export default function Header() {
     <>
       <header
         className={cn(
-          'sticky top-0 z-50 w-full transition-all duration-300 ease-herb',
-          scrolled
-            ? 'bg-white/90 backdrop-blur-md py-3 border-b border-herb-fog'
-            : 'bg-white py-5',
+          'sticky top-0 z-50 w-full border-b transition-colors duration-300 ease-herb',
+          scrolled || mobileOpen
+            ? 'bg-[rgba(255,255,255,0.82)] backdrop-blur-[14px] border-[#EEF1F4]'
+            : 'bg-white border-transparent',
         )}
       >
-        <div className="container-content flex items-center justify-between gap-6">
+        <div className="container-content h-[60px] md:h-[76px] flex items-center justify-between gap-14">
           <Link href="/" className="flex items-center gap-3 group" aria-label="HerbCodes home">
             <span
-              className="inline-block w-8 h-8 rounded-full bg-herb-cyan"
+              className="w-[30px] h-[30px] rounded-full bg-herb-cyan flex items-center justify-center flex-shrink-0"
               aria-hidden="true"
-            />
-            <span className="flex flex-col leading-none">
-              <span className="font-hammersmith text-lg tracking-tight text-herb-ink">
+            >
+              <span className="w-3 h-3 rounded-full border-2 border-white" />
+            </span>
+            <span className="hidden md:flex flex-col leading-none">
+              <span className="font-hammersmith text-[19px] tracking-[0.02em] text-herb-ink">
                 HERBCODES
               </span>
-              <span className="font-bebas text-[10px] tracking-[0.3em] text-herb-slate mt-0.5">
+              <span className="font-bebas text-[10px] tracking-[0.42em] text-herb-slate mt-[3px]">
                 TECHNOLOGY
               </span>
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8 flex-1">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative text-sm font-medium text-herb-ink hover:text-herb-cyan transition-colors duration-200 group"
+                className="text-sm font-medium text-herb-ink py-1.5 border-b-[1.5px] border-transparent hover:border-herb-cyan transition-colors duration-200"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-herb-cyan transition-all duration-300 ease-herb group-hover:w-full" />
               </Link>
             ))}
           </nav>
 
           <div className="hidden md:block">
             <Magnetic>
-              <Button href="mailto:obafemi00@gmail.com" variant="secondary" size="sm">
-                Contact <span aria-hidden="true">»</span>
+              <Button
+                href="mailto:obafemi00@gmail.com"
+                variant="secondary"
+                size="sm"
+                className="px-5 py-[9px] text-sm border-[1.5px]"
+              >
+                Contact <span aria-hidden="true" className="text-[15px] leading-none">»</span>
               </Button>
             </Magnetic>
           </div>
 
           <button
             type="button"
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden flex items-center gap-2.5 h-11 pl-3 pr-1 font-inter text-sm font-medium text-herb-ink"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={mobileOpen}
           >
-            <span
-              className={cn(
-                'w-6 h-0.5 bg-herb-ink transition-all',
-                mobileOpen && 'translate-y-2 rotate-45',
-              )}
-            />
-            <span
-              className={cn(
-                'w-6 h-0.5 bg-herb-ink transition-all',
-                mobileOpen && 'opacity-0',
-              )}
-            />
-            <span
-              className={cn(
-                'w-6 h-0.5 bg-herb-ink transition-all',
-                mobileOpen && '-translate-y-2 -rotate-45',
-              )}
-            />
+            <span aria-hidden="true">{mobileOpen ? 'Close' : 'Menu'}</span>
+            <span className="flex flex-col gap-[5px] w-5" aria-hidden="true">
+              <span className="h-[1.5px] bg-herb-ink" />
+              <span className="h-[1.5px] w-3.5 ml-1.5 bg-herb-cyan" />
+            </span>
           </button>
         </div>
       </header>
 
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 top-16 z-40 bg-white">
-          <nav className="container-content flex flex-col gap-6 pt-12">
-            {navItems.map((item) => (
+        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 z-40 bg-white px-6 pt-10 pb-8 flex flex-col">
+          <nav className="flex flex-col">
+            {mobileNavItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-hammersmith text-3xl text-herb-ink hover:text-herb-cyan transition-colors"
+                className="flex items-center justify-between py-[18px] border-b border-[#E4E8EC] font-hammersmith text-[32px] leading-[1.1] text-herb-ink"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
+                <span className="text-xl text-herb-cyan" aria-hidden="true">→</span>
               </Link>
             ))}
+          </nav>
+          <div className="mt-auto flex flex-col gap-4">
             <Button
               href="mailto:obafemi00@gmail.com"
               variant="primary"
-              className="mt-6 self-start"
+              className="h-[52px] text-[15px] shadow-none hover:shadow-none"
             >
-              Contact
+              Start a project <span aria-hidden="true">»</span>
             </Button>
-          </nav>
+            <a
+              href="mailto:obafemi00@gmail.com"
+              className="text-center text-sm text-herb-cyan"
+            >
+              obafemi00@gmail.com
+            </a>
+          </div>
         </div>
       )}
     </>

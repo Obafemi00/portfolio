@@ -1,62 +1,77 @@
 import Link from 'next/link';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { featuredProjects } from '@/data/projects';
+import { cn } from '@/lib/utils';
+
+// Desktop placement for the 7fr/5fr layout: items 1 and 3 stack on the left,
+// item 2 sits in the right column offset down by 80px. Mobile keeps source order.
+const placements = [
+  'md:col-start-1 md:row-start-1',
+  'md:col-start-2 md:row-start-1 md:row-span-2 md:pt-20',
+  'md:col-start-1 md:row-start-2',
+];
 
 export default function FeaturedWork() {
   return (
-    <section className="py-section bg-herb-fog">
+    <section id="selected-work" className="pt-[72px] pb-20 md:pt-32 md:pb-[120px] bg-herb-fog">
       <div className="container-content">
-        <div className="flex flex-col gap-4 mb-16 max-w-2xl">
-          <Eyebrow>Selected work</Eyebrow>
-          <h2 className="text-h2 font-hammersmith text-herb-ink balance">
+        <div className="flex flex-col gap-3.5 md:gap-4 mb-10 md:mb-16">
+          <Eyebrow className="text-[13px] tracking-[0.24em] md:text-sm md:tracking-[0.28em]">
+            Selected work
+          </Eyebrow>
+          <h2 className="m-0 font-hammersmith font-normal text-herb-ink text-[30px] md:text-[36px] leading-[1.12] tracking-normal">
             Recent projects.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-y-12 md:gap-y-[72px] md:gap-x-12 items-start">
           {featuredProjects.map((project, i) => (
             <Link
               key={project.slug}
               href={`/work#${project.slug}`}
-              className={`group flex flex-col gap-4 ${i % 2 === 1 ? 'md:mt-20' : ''}`}
+              className={cn('group flex flex-col gap-4 md:gap-[18px] text-herb-ink', placements[i])}
             >
-              <div className="aspect-[16/10] bg-herb-slate/10 overflow-hidden rounded-sm relative">
+              <div className="aspect-[16/10] rounded overflow-hidden bg-[#E9EDF0]">
                 <div
-                  className="absolute inset-0 bg-gradient-to-br from-herb-cyan/10 to-herb-purple/10 group-hover:scale-105 transition-transform duration-500 ease-herb flex items-center justify-center"
+                  className="w-full h-full flex items-center justify-center transition-transform duration-[600ms] ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-[1.03]"
+                  style={{
+                    background:
+                      'repeating-linear-gradient(135deg, #E9EDF0 0 12px, #E2E7EB 12px 13px)',
+                  }}
                 >
-                  <span className="font-hammersmith text-4xl text-herb-slate/40">
-                    {project.name}
+                  <span className="font-mono text-[11px] md:text-xs text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
+                    cover image: {project.name}
                   </span>
                 </div>
               </div>
               <div className="flex items-start justify-between gap-4">
-                <div className="flex flex-col gap-1">
-                  <h3 className="font-hammersmith text-2xl text-herb-ink">
+                <div className="flex flex-col gap-1 md:gap-1.5">
+                  <h3 className="m-0 font-hammersmith font-normal text-[22px] md:text-2xl leading-[1.15] tracking-normal text-herb-ink">
                     {project.name}
                   </h3>
-                  <span className="font-bebas tracking-widest text-xs text-herb-slate uppercase">
-                    {project.category}
+                  <span className="font-bebas text-sm tracking-[0.2em] md:tracking-[0.22em] text-herb-slate uppercase">
+                    {project.category} · {project.year}
                   </span>
                 </div>
                 <span
-                  className="text-herb-cyan text-lg transition-transform duration-200 group-hover:translate-x-1"
+                  className="text-lg md:text-xl text-herb-cyan transition-transform duration-300 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:translate-x-[3px] group-hover:-translate-y-[3px]"
                   aria-hidden="true"
                 >
-                  →
+                  ↗
                 </span>
               </div>
             </Link>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-12 md:mt-24 flex justify-center">
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 font-inter text-herb-ink hover:text-herb-cyan transition-colors group"
+            className="group w-full md:w-auto h-[52px] md:h-auto flex items-center justify-center gap-2.5 text-[15px] font-medium text-herb-ink rounded-full md:rounded-none border border-[#D5DBE0] md:border-0 md:pb-1 md:border-b-[1.5px] md:border-transparent md:hover:border-herb-cyan transition-colors duration-200"
           >
-            <span>View all work</span>
+            View all work
             <span
-              className="transition-transform duration-200 group-hover:translate-x-1"
+              className="text-herb-cyan transition-transform duration-300 ease-[cubic-bezier(.2,.8,.2,1)] group-hover:translate-x-1"
               aria-hidden="true"
             >
               →
