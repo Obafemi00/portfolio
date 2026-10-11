@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Eyebrow from '@/components/ui/Eyebrow';
 import CtaBand from '@/components/layout/CtaBand';
 
 export const metadata: Metadata = {
@@ -7,11 +6,16 @@ export const metadata: Metadata = {
   description: 'HerbCodes Technology. A studio focused on web design, development, and management.',
 };
 
-const values = [
-  { title: 'Precision', body: 'Details are the work. We sweat them so you don\'t have to.' },
-  { title: 'Reliability', body: 'Sites that keep working, months and years after launch.' },
-  { title: 'Clarity', body: 'Direct communication, honest scoping, no surprises.' },
-  { title: 'Long-term thinking', body: 'Every decision considers what comes next.' },
+const h1Lines = [
+  { text: 'Engineered systems,', delay: '[--mask-reveal-delay:150ms]' },
+  { text: 'built with care.', delay: '[--mask-reveal-delay:270ms]' },
+];
+
+const principles = [
+  { num: '01', title: 'Precision', body: 'Details are the work. We sweat them so you don\'t have to.' },
+  { num: '02', title: 'Reliability', body: 'Sites that keep working, months and years after launch.' },
+  { num: '03', title: 'Clarity', body: 'Direct communication, honest scoping, no surprises.' },
+  { num: '04', title: 'Long-term thinking', body: 'Every decision considers what comes next.' },
 ];
 
 const capabilities = [
@@ -20,73 +24,112 @@ const capabilities = [
   'Cloudflare', 'DNS/SSL', 'SEO',
 ];
 
+const socials = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/femi-herbert/' },
+  { label: 'GitHub', href: 'https://github.com/Obafemi00' },
+];
+
+const stripes = 'repeating-linear-gradient(135deg, #E9EDF0 0 12px, #E2E7EB 12px 13px)';
+
+const eyebrow = 'font-bebas text-herb-cyan text-[13px] tracking-[0.24em] md:text-sm md:tracking-[0.28em]';
+const sectionH2 = 'm-0 font-hammersmith font-normal tracking-normal text-herb-ink text-[30px] md:text-[36px] leading-[1.12]';
+
 export default function AboutPage() {
   return (
     <>
-      <section className="py-section bg-white">
-        <div className="container-content max-w-4xl">
-          <Eyebrow>About</Eyebrow>
-          <h1 className="text-h1 font-hammersmith text-herb-ink balance mt-4">
-            Engineered systems, built with care.
-          </h1>
-          <p className="text-lg text-herb-slate font-inter mt-8 leading-relaxed">
-            HerbCodes builds modern, reliable, scalable digital systems for teams that need work done right the first time. Web design, development, and management under one roof.
-          </p>
+      <section className="bg-white pt-[72px] pb-24 md:pt-40 md:pb-36">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-6 md:items-end">
+          <div className="md:col-span-8 flex flex-col gap-5 md:gap-6">
+            <div className={eyebrow}>ABOUT</div>
+            <h1 className="m-0 font-hammersmith font-normal text-herb-ink text-[40px] md:text-[52px] leading-[1.1] tracking-[-0.01em] max-w-[720px]">
+              {h1Lines.map((line) => (
+                <span key={line.text} className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
+                  <span className={`mask-reveal-line block ${line.delay}`}>{line.text}</span>
+                </span>
+              ))}
+            </h1>
+          </div>
+          <div className="md:col-span-4">
+            <p className="m-0 mt-4 font-inter text-base md:text-lg leading-[1.65] text-herb-slate max-w-[620px]">
+              HerbCodes builds modern, reliable, scalable digital systems for teams that need work done right the first time. Web design, development, and management under one roof.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="py-section bg-herb-fog">
-        <div className="container-content">
-          <div className="grid md:grid-cols-2 gap-16 items-center max-w-5xl">
-            <div className="flex justify-center md:justify-start">
-              <div
-                className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden"
-                aria-label="Femi portrait placeholder"
-              >
-                <span className="font-hammersmith text-6xl text-herb-cyan">F</span>
-              </div>
-            </div>
-            <div className="flex flex-col gap-4">
-              <h2 className="font-hammersmith text-4xl text-herb-ink">Femi</h2>
-              <span className="font-bebas text-herb-cyan tracking-widest uppercase text-sm">
-                Founder, Web Designer and Developer
+      <section className="bg-herb-fog py-[72px] md:py-32">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 md:items-center">
+          <div className="md:col-span-5">
+            <div
+              className="w-full max-w-[420px] aspect-[1/1.08] rounded-md overflow-hidden flex items-center justify-center"
+              style={{ background: stripes }}
+              role="img"
+              aria-label="Portrait placeholder for Femi"
+            >
+              <span className="font-mono text-xs text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
+                Portrait: Femi
               </span>
-              <p className="font-inter text-base text-herb-ink leading-relaxed mt-4">
-                Femi is the founder of HerbCodes Technology, a studio focused on web design, development, and management. Five-plus years building systems that quietly hold up under real use.
-              </p>
+            </div>
+          </div>
+
+          <div className="md:col-start-7 md:col-span-5 flex flex-col gap-3.5">
+            <h2 className="m-0 font-hammersmith font-normal tracking-normal text-herb-ink text-[32px] md:text-[40px] leading-[1.1]">
+              Femi
+            </h2>
+            <div className="font-bebas text-herb-cyan text-[13px] md:text-[15px] tracking-[0.26em]">
+              FOUNDER, WEB DESIGNER AND DEVELOPER
+            </div>
+            <p className="m-0 mt-[18px] font-inter text-base md:text-lg leading-[1.65] text-herb-ink max-w-[480px]">
+              Femi is the founder of HerbCodes Technology, a studio focused on web design, development, and management. Five-plus years building systems that quietly hold up under real use.
+            </p>
+            <div className="mt-5 flex gap-4 md:gap-6">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-inter text-sm font-medium text-herb-ink pb-[3px] border-b-[1.5px] border-transparent transition-colors duration-[250ms] hover:border-herb-cyan focus-visible:border-herb-cyan"
+                >
+                  {s.label} <span className="text-herb-cyan" aria-hidden="true">↗</span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-section bg-white">
-        <div className="container-content">
-          <div className="flex flex-col gap-4 mb-12 max-w-2xl">
-            <Eyebrow>Principles</Eyebrow>
-            <h2 className="text-h2 font-hammersmith text-herb-ink">How we think.</h2>
+      <section className="bg-white py-[72px] md:py-32">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+          <div className="mb-9 md:mb-16 flex flex-col gap-3">
+            <div className={eyebrow}>PRINCIPLES</div>
+            <h2 className={sectionH2}>How we think.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((v) => (
-              <div key={v.title} className="flex flex-col gap-3">
-                <h3 className="font-hammersmith text-xl text-herb-cyan">{v.title}</h3>
-                <p className="font-inter text-sm text-herb-slate leading-relaxed">{v.body}</p>
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6 md:gap-8">
+            {principles.map((p) => (
+              <div key={p.num} className="pt-6 border-t border-[#E4E8EC] flex flex-col gap-3.5">
+                <span className="font-bebas text-sm tracking-[0.2em] text-herb-slate">{p.num}</span>
+                <h3 className="m-0 font-hammersmith font-normal tracking-normal text-[22px] leading-[1.2] text-herb-cyan">
+                  {p.title}
+                </h3>
+                <p className="m-0 font-inter text-base leading-[1.6] text-herb-slate max-w-[260px]">{p.body}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-section bg-herb-fog">
-        <div className="container-content">
-          <div className="flex flex-col gap-4 mb-12">
-            <Eyebrow>Capabilities</Eyebrow>
-            <h2 className="text-h2 font-hammersmith text-herb-ink">What we work with.</h2>
+      <section className="bg-herb-fog py-[72px] md:py-32">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
+          <div className="md:col-span-4 flex flex-col gap-4">
+            <div className={eyebrow}>CAPABILITIES</div>
+            <h2 className={sectionH2}>What we work with.</h2>
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="md:col-start-6 md:col-span-7 flex flex-wrap content-start gap-3 md:pt-2">
             {capabilities.map((tag) => (
               <span
                 key={tag}
-                className="font-bebas uppercase tracking-widest text-sm px-4 py-2 border border-herb-cyan text-herb-cyan"
+                className="font-bebas text-[15px] md:text-[17px] leading-none tracking-[0.14em] text-herb-cyan border border-herb-cyan rounded-full whitespace-nowrap pt-2 px-3.5 pb-1.5 md:pt-2.5 md:px-[18px] md:pb-2"
               >
                 {tag}
               </span>
