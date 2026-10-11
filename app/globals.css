@@ -72,3 +72,30 @@ html.lenis body {
     scroll-behavior: auto !important;
   }
 }
+
+@keyframes process-mask-reveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.process-h1-reveal {
+  animation: process-mask-reveal 900ms cubic-bezier(0.65, 0, 0.35, 1) 150ms backwards;
+}
+
+@keyframes process-cue-dot {
+  0% { transform: translateY(0); opacity: 0; }
+  15% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(58px); opacity: 0; }
+}
+
+.process-cue-dot {
+  animation: process-cue-dot 2200ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-h1-reveal,
+  .process-cue-dot {
+    animation: none !important;
+  }
+}
