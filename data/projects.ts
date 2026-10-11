@@ -14,7 +14,14 @@ export type Project = {
   featured: boolean;
   coverImage: string;
   gallery: string[];
+  tags: ProjectTag[];
+  stats: Array<{ value: string; label: string }>;
 };
+
+export type ProjectTag = 'Web' | 'E-commerce' | 'Redesign' | 'Full-stack';
+
+export const projectFilters = ['All', 'Web', 'E-commerce', 'Redesign', 'Full-stack'] as const;
+export type ProjectFilter = (typeof projectFilters)[number];
 
 export const projects: Project[] = [
   {
@@ -40,6 +47,12 @@ export const projects: Project[] = [
       '/projects/realxworld-gallery-02.png',
       '/projects/realxworld-gallery-03.png',
     ],
+    tags: ['Full-stack'],
+    stats: [
+      { value: '2', label: 'Development phases' },
+      { value: '₦1.5M', label: 'Project value' },
+      { value: '100%', label: 'Delivered on time' },
+    ],
   },
   {
     slug: 'ituen-basi',
@@ -63,6 +76,8 @@ export const projects: Project[] = [
       '/projects/ituenbasi-gallery-02.png',
       '/projects/ituenbasi-gallery-03.png',
     ],
+    tags: ['E-commerce', 'Redesign'],
+    stats: [{ value: '21', label: 'Products' }],
   },
   {
     slug: 'studio-sdk-cgi',
@@ -86,6 +101,8 @@ export const projects: Project[] = [
       '/projects/studiosdk-gallery-02.png',
       '/projects/studiosdk-gallery-03.png',
     ],
+    tags: ['Web'],
+    stats: [],
   },
   {
     slug: 'leapcrest',
@@ -107,6 +124,8 @@ export const projects: Project[] = [
       '/projects/leapcrest-gallery-02.png',
       '/projects/leapcrest-gallery-03.png',
     ],
+    tags: ['Web'],
+    stats: [{ value: '$50K', label: 'Project value' }],
   },
   {
     slug: 'creator-playbook',
@@ -129,6 +148,11 @@ export const projects: Project[] = [
       '/projects/creatorplaybook-gallery-01.png',
       '/projects/creatorplaybook-gallery-02.png',
       '/projects/creatorplaybook-gallery-03.png',
+    ],
+    tags: ['Full-stack'],
+    stats: [
+      { value: '₦300K', label: 'Project value' },
+      { value: '3 mo', label: 'Maintenance included' },
     ],
   },
   {
@@ -153,6 +177,11 @@ export const projects: Project[] = [
       '/projects/foundergroundworks-gallery-02.png',
       '/projects/foundergroundworks-gallery-03.png',
     ],
+    tags: ['Web', 'Full-stack'],
+    stats: [
+      { value: '₦350K', label: 'Project value' },
+      { value: '3 mo', label: 'Maintenance included' },
+    ],
   },
   {
     slug: 'katy-express-track',
@@ -174,6 +203,11 @@ export const projects: Project[] = [
       '/projects/katyexpress-gallery-01.png',
       '/projects/katyexpress-gallery-02.png',
       '/projects/katyexpress-gallery-03.png',
+    ],
+    tags: ['Web', 'Redesign'],
+    stats: [
+      { value: '₦200K', label: 'Revamp' },
+      { value: '₦50K', label: 'Monthly maintenance' },
     ],
   },
   {
@@ -198,6 +232,8 @@ export const projects: Project[] = [
       '/projects/bakonery-gallery-02.png',
       '/projects/bakonery-gallery-03.png',
     ],
+    tags: ['E-commerce'],
+    stats: [],
   },
   {
     slug: '1010-coding',
@@ -221,6 +257,8 @@ export const projects: Project[] = [
       '/projects/1010coding-gallery-02.png',
       '/projects/1010coding-gallery-03.png',
     ],
+    tags: ['Web'],
+    stats: [],
   },
 ];
 
