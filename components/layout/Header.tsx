@@ -11,11 +11,7 @@ const navItems = [
   { label: 'Work', href: '/work' },
   { label: 'Process', href: '/process' },
   { label: 'About', href: '/about' },
-];
-
-const mobileNavItems = [
-  ...navItems,
-  { label: 'Contact', href: 'mailto:obafemi00@gmail.com' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Header() {
@@ -74,7 +70,7 @@ export default function Header() {
           <div className="hidden md:block">
             <Magnetic>
               <Button
-                href="mailto:obafemi00@gmail.com"
+                href="/contact"
                 variant="secondary"
                 size="sm"
                 className="px-5 py-[9px] text-sm border-[1.5px]"
@@ -103,7 +99,7 @@ export default function Header() {
       {mobileOpen && (
         <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 z-40 bg-white px-6 pt-10 pb-8 flex flex-col">
           <nav className="flex flex-col">
-            {mobileNavItems.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
