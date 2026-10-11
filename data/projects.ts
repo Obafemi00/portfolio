@@ -39,7 +39,7 @@ export const projects: Project[] = [
     approach:
       'Architected on Next.js with PostgreSQL and Prisma for the data layer, Redis for caching, Cloudinary for media, and Cloudflare at the edge. Delivered across Phase 1 and Phase 2 engagements.',
     outcome:
-      'A production-grade application stack delivered across two phases at a development fee of NGN 1.5M.',
+      'A production-grade application stack delivered across two phases.',
     featured: true,
     coverImage: '/projects/realxworld-cover.png',
     gallery: [
@@ -50,7 +50,6 @@ export const projects: Project[] = [
     tags: ['Full-stack'],
     stats: [
       { value: '2', label: 'Development phases' },
-      { value: '₦1.5M', label: 'Project value' },
       { value: '100%', label: 'Delivered on time' },
     ],
   },
@@ -116,7 +115,7 @@ export const projects: Project[] = [
     overview: 'A corporate website for an international client.',
     problem: 'The company needed a corporate web presence built on a modern, maintainable stack.',
     approach: 'Full site design and build in Next.js delivered as an international engagement.',
-    outcome: 'Delivered at a project value of $50,000.',
+    outcome: 'Delivered as an international engagement.',
     featured: false,
     coverImage: '/projects/leapcrest-cover.png',
     gallery: [
@@ -125,7 +124,7 @@ export const projects: Project[] = [
       '/projects/leapcrest-gallery-03.png',
     ],
     tags: ['Web'],
-    stats: [{ value: '$50K', label: 'Project value' }],
+    stats: [],
   },
   {
     slug: 'creator-playbook',
@@ -141,7 +140,7 @@ export const projects: Project[] = [
       'The platform needed authenticated access, a data layer, and Stripe-based payments configured end to end.',
     approach:
       'Built on Next.js with Supabase for data and auth and Stripe for payments. Handled Supabase project configuration and Stripe payment flows as part of the build.',
-    outcome: 'Delivered at NGN 300,000 with three months of maintenance.',
+    outcome: 'Delivered with three months of included maintenance.',
     featured: false,
     coverImage: '/projects/creatorplaybook-cover.png',
     gallery: [
@@ -150,10 +149,7 @@ export const projects: Project[] = [
       '/projects/creatorplaybook-gallery-03.png',
     ],
     tags: ['Full-stack'],
-    stats: [
-      { value: '₦300K', label: 'Project value' },
-      { value: '3 mo', label: 'Maintenance included' },
-    ],
+    stats: [{ value: '3 mo', label: 'Maintenance included' }],
   },
   {
     slug: 'founder-groundworks',
@@ -169,7 +165,7 @@ export const projects: Project[] = [
       'The client needed a custom-built web presence rather than a template site, with Google Workspace configured for operations.',
     approach:
       'Built on Next.js and Supabase, paired with a Google Workspace setup and three months of maintenance.',
-    outcome: 'Delivered at NGN 350,000 with three months of maintenance.',
+    outcome: 'Delivered with three months of included maintenance.',
     featured: false,
     coverImage: '/projects/foundergroundworks-cover.png',
     gallery: [
@@ -178,10 +174,7 @@ export const projects: Project[] = [
       '/projects/foundergroundworks-gallery-03.png',
     ],
     tags: ['Web', 'Full-stack'],
-    stats: [
-      { value: '₦350K', label: 'Project value' },
-      { value: '3 mo', label: 'Maintenance included' },
-    ],
+    stats: [{ value: '3 mo', label: 'Maintenance included' }],
   },
   {
     slug: 'katy-express-track',
@@ -196,7 +189,7 @@ export const projects: Project[] = [
     problem: 'The existing Wix site needed a revamp and continuing technical support.',
     approach:
       'Revamped the site on Wix and continued with monthly maintenance covering updates and technical support.',
-    outcome: 'Delivered at NGN 200,000 plus NGN 50,000 per month for ongoing maintenance.',
+    outcome: 'Delivered with monthly maintenance alongside the revamp.',
     featured: false,
     coverImage: '/projects/katyexpress-cover.png',
     gallery: [
@@ -205,10 +198,7 @@ export const projects: Project[] = [
       '/projects/katyexpress-gallery-03.png',
     ],
     tags: ['Web', 'Redesign'],
-    stats: [
-      { value: '₦200K', label: 'Revamp' },
-      { value: '₦50K', label: 'Monthly maintenance' },
-    ],
+    stats: [],
   },
   {
     slug: 'bakonery',
