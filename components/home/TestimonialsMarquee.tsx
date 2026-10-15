@@ -8,7 +8,7 @@ const clientNames = [
   'Katy Express Track',
   'Creator Playbook',
   'Realxworld',
-  'Studio SDK CGI',
+  'Studio SDK',
   'LeapCrest',
   '1010 Coding',
 ];
