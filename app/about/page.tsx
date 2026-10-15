@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import CtaBand from '@/components/layout/CtaBand';
 
 export const metadata: Metadata = {
@@ -29,8 +30,6 @@ const socials = [
   { label: 'GitHub', href: 'https://github.com/Obafemi00' },
 ];
 
-const stripes = 'repeating-linear-gradient(135deg, #E9EDF0 0 12px, #E2E7EB 12px 13px)';
-
 const eyebrow = 'font-bebas text-herb-cyan text-[13px] tracking-[0.24em] md:text-sm md:tracking-[0.28em]';
 const sectionH2 = 'm-0 font-hammersmith font-normal tracking-normal text-herb-ink text-[30px] md:text-[36px] leading-[1.12]';
 
@@ -60,15 +59,15 @@ export default function AboutPage() {
       <section className="bg-herb-fog py-[72px] md:py-32">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 md:items-center">
           <div className="md:col-span-5">
-            <div
-              className="w-full max-w-[420px] aspect-[1/1.08] rounded-md overflow-hidden flex items-center justify-center"
-              style={{ background: stripes }}
-              role="img"
-              aria-label="Portrait placeholder for Femi"
-            >
-              <span className="font-mono text-xs text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
-                Portrait: Femi
-              </span>
+            <div className="w-full max-w-[420px] aspect-[1/1.08] rounded-md overflow-hidden flex items-center justify-center">
+              <Image
+                src="/femi-portrait.jpeg"
+                alt="Portrait of Femi, founder of HerbCodes Technology"
+                width={840}
+                height={907}
+                priority
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
