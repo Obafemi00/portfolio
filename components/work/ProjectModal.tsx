@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from 'react';
+import Image from 'next/image';
 import type { Project } from '@/data/projects';
 
 type Props = {
@@ -126,13 +127,16 @@ export default function ProjectModal({ project, onClose, onNext }: Props) {
           </button>
         </div>
 
-        <div
-          className="h-[38vh] sm:h-[60vh] flex items-center justify-center"
-          style={{ background: stripes }}
-        >
-          <span className="font-mono text-xs text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
-            cover image: {project.name}
-          </span>
+        <div className="h-[38vh] sm:h-[60vh] flex items-center justify-center bg-[#E9EDF0]">
+          <Image
+            src={project.coverImage}
+            alt={`${project.name} cover`}
+            width={1600}
+            height={1000}
+            priority
+            sizes="90vw"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <div className="max-w-[1080px] mx-auto px-6 pt-9 pb-8 sm:px-16 sm:pt-16 sm:pb-14">

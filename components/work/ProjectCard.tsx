@@ -1,13 +1,12 @@
 'use client';
 
+import Image from 'next/image';
 import type { Project } from '@/data/projects';
 
 type Props = {
   project: Project;
   onOpen: () => void;
 };
-
-const stripes = 'repeating-linear-gradient(135deg, #E9EDF0 0 12px, #E2E7EB 12px 13px)';
 
 // Native <button> gives Enter and Space activation and focus for free.
 // Children are spans so the markup stays valid phrasing content.
@@ -21,14 +20,14 @@ export default function ProjectCard({ project, onOpen }: Props) {
       className="group relative flex w-full flex-col gap-[18px] pb-[22px] text-left text-herb-ink bg-transparent border-0 p-0 cursor-pointer"
     >
       <span className="block aspect-[16/10] rounded overflow-hidden bg-[#E9EDF0]">
-        <span
-          className="flex w-full h-full items-center justify-center transition-transform duration-[600ms] ease-[cubic-bezier(.2,.8,.2,1)] motion-safe:group-hover:scale-[1.03] motion-safe:group-focus-visible:scale-[1.03]"
-          style={{ background: stripes }}
-        >
-          <span className="font-mono text-xs text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
-            cover image: {project.name}
-          </span>
-        </span>
+        <Image
+          src={project.coverImage}
+          alt={`${project.name} cover`}
+          width={1600}
+          height={1000}
+          sizes="(max-width: 768px) 100vw, 50vw"
+          className="w-full h-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(.2,.8,.2,1)] motion-safe:group-hover:scale-[1.03] motion-safe:group-focus-visible:scale-[1.03]"
+        />
       </span>
 
       <span className="flex items-end justify-between gap-4">

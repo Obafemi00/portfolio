@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Eyebrow from '@/components/ui/Eyebrow';
 import { featuredProjects } from '@/data/projects';
@@ -32,17 +33,14 @@ export default function FeaturedWork() {
               className={cn('group flex flex-col gap-4 md:gap-[18px] text-herb-ink', placements[i])}
             >
               <div className="aspect-[16/10] rounded overflow-hidden bg-[#E9EDF0]">
-                <div
-                  className="w-full h-full flex items-center justify-center transition-transform duration-[600ms] ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-[1.03]"
-                  style={{
-                    background:
-                      'repeating-linear-gradient(135deg, #E9EDF0 0 12px, #E2E7EB 12px 13px)',
-                  }}
-                >
-                  <span className="font-mono text-[11px] md:text-xs text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
-                    cover image: {project.name}
-                  </span>
-                </div>
+                <Image
+                  src={project.coverImage}
+                  alt={`${project.name} cover`}
+                  width={1600}
+                  height={1000}
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  className="w-full h-full object-cover transition-transform duration-[600ms] ease-[cubic-bezier(.2,.8,.2,1)] group-hover:scale-[1.03]"
+                />
               </div>
               <div className="flex items-start justify-between gap-4">
                 <div className="flex flex-col gap-1 md:gap-1.5">
