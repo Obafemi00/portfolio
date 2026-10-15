@@ -26,6 +26,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://herbcodes.vercel.app'),
   title: 'HerbCodes Technology | Web Design, Development, Management',
   description: 'HerbCodes Technology. Web design, development, and management.',
   openGraph: {
