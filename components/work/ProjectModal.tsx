@@ -10,8 +10,6 @@ type Props = {
   onNext: () => void;
 };
 
-const stripes = 'repeating-linear-gradient(135deg, #E9EDF0 0 12px, #E2E7EB 12px 13px)';
-const gallery = ['01', '02', '03', '04'] as const;
 
 const focusableSelector =
   'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
@@ -218,15 +216,19 @@ export default function ProjectModal({ project, onClose, onNext }: Props) {
           </div>
 
           <div className="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2 sm:gap-6 sm:mt-6">
-            {gallery.map((n) => (
+            {project.gallery.map((src, i) => (
               <div
-                key={n}
-                className="aspect-[16/10] rounded flex items-center justify-center"
-                style={{ background: stripes }}
+                key={src}
+                className="aspect-[16/10] rounded-sm overflow-hidden bg-herb-fog"
               >
-                <span className="font-mono text-[11px] text-herb-slate bg-[rgba(244,246,248,0.9)] px-2.5 py-1">
-                  screenshot {n}
-                </span>
+                <Image
+                  src={src}
+                  alt={`${project.name} screenshot ${String(i + 1).padStart(2, '0')}`}
+                  width={1600}
+                  height={1000}
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>
