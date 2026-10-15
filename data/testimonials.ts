@@ -11,6 +11,15 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
+    slug: 'sav-studio-sdk',
+    quote:
+      "Working with Herbcodes was so natural and seamless. He tried to understand my goals and customized the projects to align with them, asking for my input along the way. It was a collaborative experience and he made sure I was satisfied with each project. I can’t recommend him enough.",
+    author: 'Sav',
+    role: 'Founder',
+    company: 'Studio SDK',
+    approved: true,
+  },
+  {
     slug: 'bakonery',
     quote:
       'HerbCodes rebuilt our storefront and connected our Etsy listings without missing an order. The site has run cleanly since launch. (Real quote pending.)',
